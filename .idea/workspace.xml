@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="639c0c21-ecf8-437d-926e-f4308d7bfd05" name="Default" comment="" />
+    <ignored path="roommate_tracker.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Resources/config/schema/monolog-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.User.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.Address.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Loader/schema/routing/routing-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/travis/pgsql.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/travis/mysql.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/travis/sqlite.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Templating/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/build.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/jdorn/sql-formatter/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/full.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/spool_memory.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Mapping/Loader/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/one_mailer.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/spool_service.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/empty.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/mail.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/sendmail.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/spool.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/spool_service_invalid.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/many_mailers.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/antiflood.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/inflector/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/redirect_single.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/smtp.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/null.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Tests/DependencyInjection/Fixtures/config/xml/redirect.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/notes/message.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Propel1/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/annotations/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Finder/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Resources/config/swiftmailer.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Resources/config/schema/swiftmailer-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Tools/Export/xml/Doctrine.Tests.ORM.Tools.Export.User.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/OptionsResolver/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/full.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/templating_url_package.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/validation_annotations.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/bundled_map.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/profiler.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/session.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/site_map.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/phpdoc_docs.xslt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/lastcraft.xslt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/extension.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC869.DDC869CreditCardPayment.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/package.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC964.DDC964User.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/bundled_docs.xslt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC869.DDC869Payment.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/onpk/map_onpk.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.CMS.CmsUser.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/TestBundle/Resources/config/validation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/onpk/onpk.xslt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.ORM.Mapping.Animal.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.ORM.Mapping.User.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.ORM.Mapping.DDC1170Entity.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC889.DDC889Class.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/map.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491944" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.ORM.Mapping.CTI.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.Company.CompanyPerson.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/CatNoId.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC889.DDC889Entity.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC1476.DDC1476EntityWithDefaultFieldType.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC889.DDC889SuperClass.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_download.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/one_section_with_php_code.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC117.DDC117Translation.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_support.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC964.DDC964Guest.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/content_without_section.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC964.DDC964Admin.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/one_section_changelogged.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.ORM.Mapping.DDC807Entity.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_start_testing.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.Generic.SerializationModel.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.CMS.CmsAddress.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tests/Doctrine/Tests/ORM/Mapping/xml/Doctrine.Tests.Models.DDC869.DDC869ChequePayment.dcm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/map.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/one_section_milestoned.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/one_section_with_autorum_php.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_simpletest.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_unit-tester.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/here_overview.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/en/synchronisation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/fr/no-synchronisation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/packages/simpletest.org/test/package/fr/synchronisation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/collections/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Locale/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/doctrine-mapping.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/webconfigurator.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services5.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services9.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/routing/webconfigurator.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/withdoctype.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/nonvalid.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/BrowserKit/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services4_bad_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services8.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services7.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services6.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services13.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/build.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services4.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services3.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/translation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DomCrawler/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/routing.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extension1/services.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/profiling.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extension2/services.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/debug.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services6.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/collectors.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/debug_prod.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services7.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/fragment_renderer.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services3.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services4.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/annotations.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services5.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/validator.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/fragment_listener.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/form.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/esi.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/web.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating_debug.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/CssSelector/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/services.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/test.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/session.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating_php.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/form_csrf.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/schema/symfony-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491945" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Filesystem/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_imports.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_filters.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Intl/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/tests/travis/pgsql.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_types.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/schema/project-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/tests/travis/mysqli.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_single_em_bundle_mappings.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/tests/travis/mysql.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_multiple_em_bundle_mappings.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/dbal/tests/travis/sqlite.travis.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_logging.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_single_em_dql_functions.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_namingstrategy.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_service_single_entity_manager.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_service_single_master_slave_connection.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/CssSelector/Tests/XPath/Fixtures/lang.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_schema_filter.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_proxy.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_service_multiple_entity_managers.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_service_single_connection.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_resolve_target_entity.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_functions.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_hydration_mode.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_imports_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/dbal_service_multiple_connections.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/config/xml/orm_service_simple_single_entity_manager.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/full.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/customTemplateEscapingGuesser.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/empty.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/application_2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/schema/dic/services/services-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/routing.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/converters.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/cache.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/view.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/annotations.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Resources/config/services.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/command_1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Tests/DependencyInjection/Fixtures/Bundles/XmlBundle/Resources/config/doctrine/Test.orm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/command_2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/monolog/monolog/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_4.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/twig.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/debug.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/schema/twig-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_3.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_3.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_3.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/config/orm.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/config/dbal.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/config/schema/doctrine-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_4.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/application_1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/toolbar.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/profiler.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/schema/webprofiler-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/routing/wdt.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/routing/profiler.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/TODO.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/build.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/cache/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Process/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/group_test_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Yaml/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/templating_php.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/speakers_coaches_consultancy.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/assetic.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/mock_objects_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/reporter_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/controller.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/extension_eclipse.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/templating_twig.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/subclass_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/group_test_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/schema/assetic-1.0.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/experimental_intro.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/scssphp.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/ideas.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/cssimport.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/softwares_using_simpletest.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/cssmin.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/screencasts.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/jsminplus.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/support_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/cssembed.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/download_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/packager.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/changelog.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/yui_css.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/merge.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/gain_control_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/uglifyjs.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/custom_acl_provider.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491946" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/simple_test.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/lessphp.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/merge_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/index.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/common/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xml.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/jsmin.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/container1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/unit_test_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xliff-core-1.2-strict.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/phpcssembed.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/invalid_check_path.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/heartbeat.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/typescript.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/partial_mocks_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/common/build.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/twig/twig/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/pngout.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/web_tester_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/stylus.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/writing_extensions.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/handlebars.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/overview.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/closure.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/improving_design_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/gss.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/books_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/compass.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/experimental_dom_tester.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/optipng.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/photos_stream.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/coffee.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/browser_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/dart.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/boundary_classes_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/scss.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/authentication_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/jpegoptim.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/form_testing_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/sprockets.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/first_test_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/cssrewrite.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/intro.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/sass.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/templating_php.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/about.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/jpegtran.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_acl.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/mock_objects_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/uglifycss.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_rememberme.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/expectation_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/icu/Symfony/Component/Icu/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/uglifyjs2.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/collectors.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/experimental_recorder.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/display_subclass_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/less.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_listeners.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/en/coding_standards.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/templating_twig.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Resources/config/filters/yui_js.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/reporter_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_acl_dbal.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/group_test_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/download_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/books_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/form_testing_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/intro.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/logiciels_utilisant_simpletest.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/index.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/authentication_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/expectation_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/mock_objects_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/constraint-mapping.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/support_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/extension_eclipse.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/withdoctype.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/mock_objects_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/constraint-mapping-non-strings.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/subclass_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/gain_control_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/first_test_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/improving_design_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/web_tester_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/display_subclass_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/partial_mocks_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/group_test_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/browser_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/overview.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/boundary_classes_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/unit_test_documentation.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/simple_test.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalidroute.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalidnode.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/validpattern.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/missing_path.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/namespaceprefix.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Serializer/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/validresource.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalid.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/overwriting_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/withdoctype.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/new_at_end_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/foo1.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/new_at_end.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/foo.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/multiple_handlers.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/foo.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/overwriting.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/valid.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/twig/extensions/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/new_and_priority_import.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/document_type.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Tests/DependencyInjection/Fixtures/xml/handlers_with_channels.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/invalid.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/missing_id.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/schema.xsd" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/invalid_schema.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Again/foo.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Resources/config/monolog.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
+    <file path="/composer.json" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160553896" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="roommate_tracker" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="30" selection-start="114" selection-end="114" vertical-scroll-proportion="-1.9615384">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="14" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2905983">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4.12" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-5" />
+    <option name="y" value="-5" />
+    <option name="width" value="1627" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Configurable.PHP" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="FullScreen" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RunManager" selected="PHP Built-in Web Server.Localhost">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server">
+      <method />
+    </configuration>
+    <configuration default="false" name="Localhost" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/web" port="8000">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Built-in Web Server.Localhost" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="639c0c21-ecf8-437d-926e-f4308d7bfd05" name="Default" comment="" />
+      <created>1380158339096</created>
+      <updated>1380158339096</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-5" y="-5" width="1627" height="1060" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972628" sideWeight="0.6717892" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26543602" sideWeight="0.67069155" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930845" sideWeight="0.5003183" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930845" sideWeight="0.49968174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="114" selection-end="114" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2905983">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
