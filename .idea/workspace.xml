@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="639c0c21-ecf8-437d-926e-f4308d7bfd05" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Controller\DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DependencyInjection\Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DependencyInjection\DominickRoommateExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DominickRoommateBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Entity\User.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\config\routing.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\config\services.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\doc\index.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\translations\messages.fr.xlf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\Default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\Default\loggedin.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\template.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Tests\Controller\DefaultControllerTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/roommate_tracker.iml" afterPath="$PROJECT_DIR$/.idea/roommate_tracker.iml" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\RoommateBundle\Entity\Users.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\RoommateBundle\Entity\product.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\RoommateBundle\Resources\config\doctrine\Users.orm.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommate_tracker.iws" />
@@ -505,7 +493,7 @@
       <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="7" selection-end="48" vertical-scroll-proportion="0.044854883">
+            <state line="14" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.31398416">
               <folding />
             </state>
           </provider>
@@ -686,6 +674,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dominick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RoommateBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1055,7 +1073,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="7" selection-end="48" vertical-scroll-proportion="0.044854883">
+        <state line="14" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.31398416">
           <folding />
         </state>
       </provider>

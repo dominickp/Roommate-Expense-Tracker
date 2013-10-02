@@ -12,7 +12,7 @@ class User
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="integer", length=100)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
