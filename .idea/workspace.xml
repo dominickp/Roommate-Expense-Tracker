@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="639c0c21-ecf8-437d-926e-f4308d7bfd05" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Controller\DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DependencyInjection\Configuration.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DependencyInjection\DominickRoommateExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\DominickRoommateBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Entity\User.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\config\routing.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\config\services.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\doc\index.rst" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\translations\messages.fr.xlf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\Default\index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\Default\loggedin.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\layout.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Resources\views\template.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\roommate_tracker\src\Dominick\Roommate\RoommateBundle\Tests\Controller\DefaultControllerTest.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/roommate_tracker.iml" afterPath="$PROJECT_DIR$/.idea/roommate_tracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig" afterPath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommate_tracker.iws" />
@@ -359,7 +365,6 @@
     <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/support_website.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/extension_eclipse.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/withdoctype.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
-    <file path="$PROJECT_DIR$/vendor/symfony/symfony/phpunit.xml.dist" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/mock_objects_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/constraint-mapping-non-strings.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491947" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/source/fr/subclass_tutorial.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
@@ -408,7 +413,7 @@
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Again/foo.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/Symfony/Bundle/MonologBundle/Resources/config/monolog.xml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160491948" ignored="false" />
     <file path="/composer.json" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380160553896" ignored="false" />
-    <file path="/Dummy.txt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380638925231" ignored="false" />
+    <file path="/Dummy.txt" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380748706774" ignored="false" />
     <file path="/.gitignore" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380163066013" ignored="false" />
     <file path="/routing.yml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380730426488" ignored="false" />
     <file path="/AppKernel.php" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380718965888" ignored="false" />
@@ -421,6 +426,9 @@
     <file path="/loggedin.html.twig" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380727150958" ignored="false" />
     <file path="/config.yml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380731577423" ignored="false" />
     <file path="/security.yml" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380738549614" ignored="false" />
+    <file path="/Users.php" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380749226633" ignored="false" />
+    <file path="/Test.php" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380753824107" ignored="false" />
+    <file path="/product.php" changelist="639c0c21-ecf8-437d-926e-f4308d7bfd05" time="1380753974970" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -449,93 +457,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="-9.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppKernel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="-14.384615">
-              <folding>
-                <element signature="e#7#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+            <state line="19" column="43" selection-start="826" selection-end="826" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing_dev.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <file leaf-file-name="DominickRoommateBundle.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DominickRoommateBundle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.8846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="security.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <file leaf-file-name="DominickRoommateExtension.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/DominickRoommateExtension.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="60" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+            <state line="28" column="0" selection-start="890" selection-end="890" vertical-scroll-proportion="-16.346153">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="550" selection-end="550" vertical-scroll-proportion="-9.153846">
+            <state line="11" column="3" selection-start="419" selection-end="419" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/Default/index.html.twig">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="2" column="18" selection-start="25" selection-end="25" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig">
+      <file leaf-file-name="User.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="20" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.51913476">
+            <state line="2" column="14" selection-start="7" selection-end="48" vertical-scroll-proportion="0.044854883">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <file leaf-file-name="parameters.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="20" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_dev.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="61" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -559,31 +538,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/Default/loggedin.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig" />
+        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Entity/Test.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Entity/product.php" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/RoommateBundle/DominickRoommateBundle.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/DominickRoommateExtension.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/Configuration.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/RoommateBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4.12" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1914" />
-    <option name="y" value="-6" />
-    <option name="width" value="1452" />
-    <option name="height" value="912" />
+    <option name="x" value="-5" />
+    <option name="y" value="-5" />
+    <option name="width" value="1627" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -611,6 +590,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -618,14 +598,6 @@
               <option name="myItemId" value="roommate_tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Composer Vendors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -633,25 +605,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Composer Vendors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony" />
-              <option name="myItemType" value="com.jetbrains.php.composer.lib.ComposerLibrariesTreeStructureProvider$ComposerPackageNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="roommate_tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,21 +615,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="roommate_tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -689,7 +629,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
+              <option name="myItemId" value="roommate_tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -700,8 +640,22 @@
               <option name="myItemId" value="Dominick" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Roommate" />
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dominick" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -715,41 +669,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dominick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roommate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoommateBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="roommate_tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -758,48 +678,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Dominick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roommate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoommateBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roommate_tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dominick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roommate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -817,7 +695,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
+              <option name="myItemId" value="roommate_tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -826,10 +704,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Dominick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Roommate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -847,7 +721,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dominick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RoommateBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DependencyInjection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dominick" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RoommateBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roommate_tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -861,29 +787,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="roommate_tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p2.kaomoj.in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -897,13 +801,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -916,6 +819,8 @@
       <recent name="C:\wamp\www\p2.kaomoj.in\src\Dominick\Roommate\RoommateBundle\Resources\views\Default" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\roommate_tracker\src\Dominick" />
+      <recent name="C:\wamp\www\roommate_tracker\src\Dominick\" />
       <recent name="C:\wamp\www\p2.kaomoj.in\app\Resources\FOSUserBundle\views" />
     </key>
   </component>
@@ -966,17 +871,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1914" y="-6" width="1452" height="912" extended-state="6" />
+    <frame x="-5" y="-5" width="1627" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972628" sideWeight="0.6717892" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32065997" sideWeight="0.89035666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23169956" sideWeight="0.8910891" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109643325" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10891089" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37516513" sideWeight="0.49928263" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1057,26 +962,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+        <state line="17" column="61" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="-9.153846">
+        <state line="29" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="-14.384615">
-          <folding>
-            <element signature="e#7#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,7 +985,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1101,37 +997,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="20" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="60" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+        <state line="20" column="14" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="36" column="17" selection-start="899" selection-end="899" vertical-scroll-proportion="0.78061223">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="550" selection-end="550" vertical-scroll-proportion="-9.153846">
+        <state line="19" column="43" selection-start="826" selection-end="826" vertical-scroll-proportion="-11.769231">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DominickRoommateBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.51913476">
+        <state line="9" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/DominickRoommateExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="890" selection-end="890" vertical-scroll-proportion="-16.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="419" selection-end="419" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="25" selection-end="25" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dominick/RoommateBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="7" selection-end="48" vertical-scroll-proportion="0.044854883">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dominick\Roommate\RoommateBundle;
+namespace Dominick\RoommateBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
