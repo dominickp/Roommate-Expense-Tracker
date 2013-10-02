@@ -16,4 +16,8 @@ class DefaultController extends Controller
     {
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
+    public function loggedinAction()
+    {
+        return $this->render('DominickRoommateBundle:Default:loggedin.html.twig', array());
+    }
 }
