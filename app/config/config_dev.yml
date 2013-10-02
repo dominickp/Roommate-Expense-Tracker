@@ -29,8 +29,3 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
-# FOSUserBundle Configuration
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    user_class: Dominick\Roommate\RoommateBundle\Entity\User

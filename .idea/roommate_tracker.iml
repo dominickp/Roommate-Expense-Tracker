@@ -75,7 +75,6 @@
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
-          <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/user-bundle" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
@@ -104,7 +103,6 @@
           <root url="file://$MODULE_DIR$/vendor/incenteev/composer-parameter-handler" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/kriswallsmith/assetic" />
-          <root url="file://$MODULE_DIR$/vendor/friendsofsymfony/user-bundle" />
         </SOURCES>
       </library>
     </orderEntry>
