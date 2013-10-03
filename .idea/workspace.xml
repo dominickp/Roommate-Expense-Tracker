@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="639c0c21-ecf8-437d-926e-f4308d7bfd05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/roommate_tracker.iml" afterPath="$PROJECT_DIR$/.idea/roommate_tracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig" afterPath="$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommate_tracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -458,10 +448,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppKernel.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="-14.384615">
+            <state line="16" column="64" selection-start="649" selection-end="649" vertical-scroll-proportion="0.45257902">
               <folding>
                 <element signature="e#7#47#0" expanded="true" />
               </folding>
@@ -514,10 +504,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="template.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="20" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.51913476">
+            <state line="64" column="0" selection-start="4808" selection-end="4808" vertical-scroll-proportion="-6.769231">
               <folding />
             </state>
           </provider>
@@ -1071,15 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="1005" selection-end="1005" vertical-scroll-proportion="-14.384615">
-          <folding>
-            <element signature="e#7#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="61" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
@@ -1131,8 +1112,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dominick/Roommate/RoommateBundle/Resources/views/template.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.51913476">
+        <state line="64" column="0" selection-start="4808" selection-end="4808" vertical-scroll-proportion="-6.769231">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="64" selection-start="649" selection-end="649" vertical-scroll-proportion="0.45257902">
+          <folding>
+            <element signature="e#7#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
