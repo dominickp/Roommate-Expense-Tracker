@@ -1,6 +1,6 @@
 <?php
 
-namespace Dominick\Roommate\RoommateBundle\DependencyInjection;
+namespace Dominick\RoommateBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

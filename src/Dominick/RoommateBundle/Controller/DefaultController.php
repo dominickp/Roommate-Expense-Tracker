@@ -1,6 +1,6 @@
 <?php
 
-namespace Dominick\Roommate\RoommateBundle\Controller;
+namespace Dominick\RoommateBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

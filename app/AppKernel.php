@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     //        new Acme\DemoBundle\AcmeDemoBundle(),
             new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
             new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
-            new Dominick\Roommate\RoommateBundle\DominickRoommateBundle(),
+            new Dominick\RoommateBundle\DominickRoommateBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
