@@ -62,7 +62,6 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/framework-standard-edition" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
@@ -91,7 +90,6 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/assetic-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/framework-standard-edition" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/orm" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />

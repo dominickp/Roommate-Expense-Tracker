@@ -48,9 +48,9 @@ class User
     private $role;
 
     /**
-     * @ORM\Get id
+     * Get id
      *
-     * @ORM\@return integer
+     * @return integer
      */
     public function getId()
     {
@@ -58,10 +58,10 @@ class User
     }
 
     /**
-     * @ORM\Set name
+     * Set name
      *
-     * @ORM\@param string $name
-     * @ORM\@return Users
+     * @param string $name
+     * @return Users
      */
     public function setName($name)
     {
@@ -71,9 +71,9 @@ class User
     }
 
     /**
-     * @ORM\Get name
+     * Get name
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getName()
     {
@@ -81,10 +81,10 @@ class User
     }
 
     /**
-     * @ORM\Set email
+     * Set email
      *
-     * @ORM\@param string $email
-     * @ORM\@return Users
+     * @param string $email
+     * @return Users
      */
     public function setEmail($email)
     {
@@ -94,9 +94,9 @@ class User
     }
 
     /**
-     * @ORM\Get email
+     * Get email
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getEmail()
     {
@@ -104,10 +104,10 @@ class User
     }
 
     /**
-     * @ORM\Set password
+     * Set password
      *
-     * @ORM\@param string $password
-     * @ORM\@return Users
+     * @param string $password
+     * @return Users
      */
     public function setPassword($password)
     {
@@ -117,9 +117,9 @@ class User
     }
 
     /**
-     * @ORM\Get password
+     * Get password
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getPassword()
     {
@@ -127,10 +127,10 @@ class User
     }
 
     /**
-     * @ORM\Set avatar
+     * Set avatar
      *
-     * @ORM\@param string $avatar
-     * @ORM\@return Users
+     * @param string $avatar
+     * @return Users
      */
     public function setAvatar($avatar)
     {
@@ -140,9 +140,9 @@ class User
     }
 
     /**
-     * @ORM\Get avatar
+     * Get avatar
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getAvatar()
     {
@@ -150,10 +150,10 @@ class User
     }
 
     /**
-     * @ORM\Set following
+     * Set following
      *
-     * @ORM\@param string $following
-     * @ORM\@return Users
+     * @param string $following
+     * @return Users
      */
     public function setFollowing($following)
     {
@@ -163,9 +163,9 @@ class User
     }
 
     /**
-     * @ORM\Get following
+     * Get following
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getFollowing()
     {
@@ -173,10 +173,10 @@ class User
     }
 
     /**
-     * @ORM\Set role
+     * Set role
      *
-     * @ORM\@param string $role
-     * @ORM\@return Users
+     * @param string $role
+     * @return Users
      */
     public function setRole($role)
     {
@@ -186,9 +186,9 @@ class User
     }
 
     /**
-     * @ORM\Get role
+     * Get role
      *
-     * @ORM\@return string
+     * @return string
      */
     public function getRole()
     {
