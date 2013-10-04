@@ -15,42 +15,42 @@ class User
      * @ORM\Column(type="integer", length=100)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    public $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    public $name;
+    private $name;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    public $email;
+    private $email;
 
     /**
      * @ORM\Column(type="string", length=250)
      */
-    public $password;
+    private $password;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=true)
+     * @ORM\Column(type="string", length=32)
      */
-    public $salt;
+    private $salt;
 
     /**
-     * @ORM\Column(type="string", length=250, nullable=true)
+     * @ORM\Column(type="string", length=250)
      */
-    public $avatar;
+    private $avatar;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=100)
      */
-    public $following;
+    private $following;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=100)
      */
-    public $role;
+    private $role;
 
     /**
      * Get id
@@ -198,28 +198,5 @@ class User
     public function getRole()
     {
         return $this->role;
-    }
-
-    /**
-     * Set salt
-     *
-     * @param string $salt
-     * @return User
-     */
-    public function setSalt($salt)
-    {
-        $this->salt = $salt;
-    
-        return $this;
-    }
-
-    /**
-     * Get salt
-     *
-     * @return string 
-     */
-    public function getSalt()
-    {
-        return $this->salt;
     }
 }

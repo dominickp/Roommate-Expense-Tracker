@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class UserController extends Controller
 {
-
     public function indexAction()
     {
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
@@ -44,6 +43,11 @@ class UserController extends Controller
             isValid() is like isSubmitted() but with a validation check on top of that.  */
         if ($form->isValid()) {
             $data = $form->getData();   // Put the form data into an object
+
+            // Create salt, then apply it to the plaintext password
+            $data->salt = hash("sha256", time().rand());
+            $data->password = hash("sha256", $data->password.$data->salt);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($data);        // Load data object into doctrine
             $em->flush();               // Execute query
