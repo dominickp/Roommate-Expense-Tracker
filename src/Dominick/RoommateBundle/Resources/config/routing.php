@@ -17,9 +17,16 @@ $collection->add('dominick_roommate_admin', new Route('/admin', array(
 )));
 
 # REGISTRATION AND AUTHENTICATION
-// Register Page
+/* Register Page
 $collection->add('dominick_roommate_register', new Route('/register', array(
     '_controller' => 'DominickRoommateBundle:User:register',
+))); */
+
+$collection->add('account_register', new Route('/register', array(
+    '_controller' => 'DominickRoommateBundle:User:register',
+)));
+$collection->add('account_create', new Route('/register/create', array(
+    '_controller' => 'DominickRoommateBundle:User:create',
 )));
 
 return $collection;

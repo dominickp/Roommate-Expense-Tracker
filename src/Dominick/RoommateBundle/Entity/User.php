@@ -3,128 +3,90 @@
 namespace Dominick\RoommateBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="user")
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
+     * @ORM\Column(type="integer")
      * @ORM\Id
-     * @ORM\Column(type="integer", length=100)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     public $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=25, nullable=true)
      */
-    public $name;
+    public $username;
 
     /**
-     * @ORM\Column(type="string", length=100)
-     */
-    public $email;
-
-    /**
-     * @ORM\Column(type="string", length=250)
-     */
-    public $password;
-
-    /**
-     * @ORM\Column(type="string", length=64, nullable=true)
+     * @ORM\Column(type="string", length=64)
      */
     public $salt;
 
     /**
-     * @ORM\Column(type="string", length=250, nullable=true)
+     * @ORM\Column(type="string", length=64, nullable=true)
      */
-    public $avatar;
+    public $plainPassword;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=64)
      */
-    public $following;
+    public $password;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=60, unique=true)
      */
-    public $role;
+    public $email;
 
     /**
-     * Get id
+     * @ORM\Column(name="is_active", type="boolean")
+     */
+    public $isActive;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
      *
-     * @return integer
      */
-    public function getId()
+    public $roles;
+
+    public function __construct()
     {
-        return $this->id;
+        $this->isActive = true;
+        $this->salt = md5(uniqid(null, true));
+    //    $this->password = $this->plainPassword;
+        $this->roles = new ArrayCollection();
+    }
+
+    public function getRoles()
+    {
+        return $this->roles->toArray();
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     * @return Users
+     * @inheritDoc
      */
-    public function setName($name)
+    public function getUsername()
     {
-        $this->name = $name;
-
-        return $this;
+        return $this->username;
     }
 
     /**
-     * Get name
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getName()
+    public function getSalt()
     {
-        return $this->name;
+        return $this->salt;
     }
 
     /**
-     * Set email
-     *
-     * @param string $email
-     * @return Users
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     * @return Users
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string
+     * @inheritDoc
      */
     public function getPassword()
     {
@@ -132,72 +94,69 @@ class User
     }
 
     /**
-     * Set avatar
-     *
-     * @param string $avatar
-     * @return Users
+     * @inheritDoc
      */
-    public function setAvatar($avatar)
+    public function getPlainPassword()
     {
-        $this->avatar = $avatar;
+        return $this->plainPassword;
+    }
 
+    /**
+     * @inheritDoc
+     */
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function eraseCredentials()
+    {
+    }
+
+    /**
+     * @see \Serializable::serialize()
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+        ));
+    }
+
+    /**
+     * @see \Serializable::unserialize()
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            ) = unserialize($serialized);
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    
         return $this;
-    }
-
-    /**
-     * Get avatar
-     *
-     * @return string
-     */
-    public function getAvatar()
-    {
-        return $this->avatar;
-    }
-
-    /**
-     * Set following
-     *
-     * @param string $following
-     * @return Users
-     */
-    public function setFollowing($following)
-    {
-        $this->following = $following;
-
-        return $this;
-    }
-
-    /**
-     * Get following
-     *
-     * @return string
-     */
-    public function getFollowing()
-    {
-        return $this->following;
-    }
-
-    /**
-     * Set role
-     *
-     * @param string $role
-     * @return Users
-     */
-    public function setRole($role)
-    {
-        $this->role = $role;
-
-        return $this;
-    }
-
-    /**
-     * Get role
-     *
-     * @return string
-     */
-    public function getRole()
-    {
-        return $this->role;
     }
 
     /**
@@ -214,12 +173,84 @@ class User
     }
 
     /**
-     * Get salt
+     * Set password
+     *
+     * @param string $password
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return User
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
      *
      * @return string 
      */
-    public function getSalt()
+    public function getEmail()
     {
-        return $this->salt;
+        return $this->email;
+    }
+
+    /**
+     * Set isActive
+     *
+     * @param boolean $isActive
+     * @return User
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+    
+        return $this;
+    }
+
+    /**
+     * Get isActive
+     *
+     * @return boolean 
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * Add roles
+     *
+     * @param \Dominick\RoommateBundle\Entity\Role $roles
+     * @return User
+     */
+    public function addRole(\Dominick\RoommateBundle\Entity\Role $roles)
+    {
+        $this->roles[] = $roles;
+    
+        return $this;
+    }
+
+    /**
+     * Remove roles
+     *
+     * @param \Dominick\RoommateBundle\Entity\Role $roles
+     */
+    public function removeRole(\Dominick\RoommateBundle\Entity\Role $roles)
+    {
+        $this->roles->removeElement($roles);
     }
 }

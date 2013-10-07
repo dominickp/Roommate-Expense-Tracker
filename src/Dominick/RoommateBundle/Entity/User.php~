@@ -3,128 +3,90 @@
 namespace Dominick\RoommateBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="user")
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
+     * @ORM\Column(type="integer")
      * @ORM\Id
-     * @ORM\Column(type="integer", length=100)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    public $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=25, nullable=true)
      */
-    private $name;
+    public $username;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=64)
      */
-    private $email;
+    public $salt;
 
     /**
-     * @ORM\Column(type="string", length=250)
+     * @ORM\Column(type="string", length=64, nullable=true)
      */
-    private $password;
+    public $plainPassword;
 
     /**
-     * @ORM\Column(type="string", length=32)
+     * @ORM\Column(type="string", length=64)
      */
-    private $salt;
+    public $password;
 
     /**
-     * @ORM\Column(type="string", length=250)
+     * @ORM\Column(type="string", length=60, unique=true)
      */
-    private $avatar;
+    public $email;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(name="is_active", type="boolean")
      */
-    private $following;
+    public $isActive;
+
 
     /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $role;
-
-    /**
-     * Get id
+     * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
      *
-     * @return integer
      */
-    public function getId()
+    public $roles;
+
+    public function __construct()
     {
-        return $this->id;
+        $this->isActive = true;
+        $this->salt = md5(uniqid(null, true));
+    //    $this->password = $this->plainPassword;
+        $this->roles = new ArrayCollection();
+    }
+
+    public function getRoles()
+    {
+        return $this->roles->toArray();
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     * @return Users
+     * @inheritDoc
      */
-    public function setName($name)
+    public function getUsername()
     {
-        $this->name = $name;
-
-        return $this;
+        return $this->username;
     }
 
     /**
-     * Get name
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getName()
+    public function getSalt()
     {
-        return $this->name;
+        return $this->salt;
     }
 
     /**
-     * Set email
-     *
-     * @param string $email
-     * @return Users
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     * @return Users
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string
+     * @inheritDoc
      */
     public function getPassword()
     {
@@ -132,71 +94,45 @@ class User
     }
 
     /**
-     * Set avatar
-     *
-     * @param string $avatar
-     * @return Users
+     * @inheritDoc
      */
-    public function setAvatar($avatar)
+    public function getPlainPassword()
     {
-        $this->avatar = $avatar;
-
-        return $this;
+        return $this->plainPassword;
     }
 
     /**
-     * Get avatar
-     *
-     * @return string
+     * @inheritDoc
      */
-    public function getAvatar()
+    public function setPlainPassword($password)
     {
-        return $this->avatar;
+        $this->plainPassword = $password;
     }
 
     /**
-     * Set following
-     *
-     * @param string $following
-     * @return Users
+     * @inheritDoc
      */
-    public function setFollowing($following)
+    public function eraseCredentials()
     {
-        $this->following = $following;
-
-        return $this;
     }
 
     /**
-     * Get following
-     *
-     * @return string
+     * @see \Serializable::serialize()
      */
-    public function getFollowing()
+    public function serialize()
     {
-        return $this->following;
+        return serialize(array(
+            $this->id,
+        ));
     }
 
     /**
-     * Set role
-     *
-     * @param string $role
-     * @return Users
+     * @see \Serializable::unserialize()
      */
-    public function setRole($role)
+    public function unserialize($serialized)
     {
-        $this->role = $role;
-
-        return $this;
-    }
-
-    /**
-     * Get role
-     *
-     * @return string
-     */
-    public function getRole()
-    {
-        return $this->role;
+        list (
+            $this->id,
+            ) = unserialize($serialized);
     }
 }
