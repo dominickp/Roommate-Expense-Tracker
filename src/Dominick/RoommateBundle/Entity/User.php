@@ -56,6 +56,20 @@ class User implements UserInterface, \Serializable
      */
     public $roles;
 
+    function setOptions(array $options)
+    {
+        $methods = get_class_methods($this);
+        foreach($options as $key => $value)
+        {
+            $method = 'set' . ucfirst($key);
+            if(in_array($method, $methods))
+            {
+                $this->$method($value);
+            }
+        }
+        return $this;
+    }
+
     public function __construct()
     {
         $this->isActive = true;

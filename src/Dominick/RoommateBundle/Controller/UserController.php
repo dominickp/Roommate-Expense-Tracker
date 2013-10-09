@@ -86,9 +86,10 @@ class UserController extends Controller
 
         if ($form->isValid()) {
            $data = $form->getData();
-
+            $user->setOptions($data);
             // cant figure out how to get passwords to hash... currently passwords are being added with plain text. trying to get the password to encrypt itself using the 5 lines below but its not working. i cant modify anything about the password. $registration->password doesnt work when i call it. I tried adding a plainPassword as well in hopes i could alter it from the form and write that back to the database after hashing but that didn't work either.
             $factory = $this->get('security.encoder_factory');
+
         //    $user = new User();
             $encoder = $factory->getEncoder($user);
             $password = $encoder->encodePassword('ryanpass', $data->getSalt());
