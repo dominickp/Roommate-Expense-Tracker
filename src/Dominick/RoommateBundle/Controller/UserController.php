@@ -74,7 +74,7 @@ class UserController extends Controller
         $form = $this->createFormBuilder($user)
             ->add('email', 'text')
             ->add('username', 'text')
-            ->add('plainPassword', 'repeated', array(
+            ->add('password', 'repeated', array(
                 'first_name'  => 'password',
                 'second_name' => 'confirm',
                 'type'        => 'password',
@@ -84,21 +84,25 @@ class UserController extends Controller
 
         $form->handleRequest($request);
 
+        // If the form is valid, we should be submitting the data, right?
         if ($form->isValid()) {
-           $data = $form->getData();
-            $user->setOptions($data);
-            // cant figure out how to get passwords to hash... currently passwords are being added with plain text. trying to get the password to encrypt itself using the 5 lines below but its not working. i cant modify anything about the password. $registration->password doesnt work when i call it. I tried adding a plainPassword as well in hopes i could alter it from the form and write that back to the database after hashing but that didn't work either.
+            $user = $form->getData();
+            // Forget about that unencrypted password the silly person gave you
+            unset($user->plainPassword);
+            // Grab the security settings for this class from security.yml
             $factory = $this->get('security.encoder_factory');
-
-        //    $user = new User();
+            // Get the encoder
             $encoder = $factory->getEncoder($user);
-            $password = $encoder->encodePassword('ryanpass', $data->getSalt());
-            $user->setPassword($password);
+            // Encrypt the password DONT FORGET TO REMOVE RYANPASS
+            // Salt is generated in the User entity
+            $user->setPassword( $encoder->encodePassword('ryanpass', $user->getSalt()));
 
-
-            $em->persist($data->getUser());
+            // Save the new row you created when you initialized User
+            $em->persist($user);
+            // Fire!
             $em->flush();
 
+            // You did a good job, billy.
             return $this->redirect($this->generateUrl('task_success'));
         }
 

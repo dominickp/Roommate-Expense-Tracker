@@ -30,11 +30,6 @@ class User implements UserInterface, \Serializable
     public $salt;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=true)
-     */
-    public $plainPassword;
-
-    /**
      * @ORM\Column(type="string", length=64)
      */
     public $password;
@@ -55,20 +50,6 @@ class User implements UserInterface, \Serializable
      *
      */
     public $roles;
-
-    function setOptions(array $options)
-    {
-        $methods = get_class_methods($this);
-        foreach($options as $key => $value)
-        {
-            $method = 'set' . ucfirst($key);
-            if(in_array($method, $methods))
-            {
-                $this->$method($value);
-            }
-        }
-        return $this;
-    }
 
     public function __construct()
     {
@@ -107,21 +88,6 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setPlainPassword($password)
-    {
-        $this->plainPassword = $password;
-    }
 
     /**
      * @inheritDoc
