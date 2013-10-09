@@ -64,7 +64,51 @@ class UserController extends Controller
         ));
     }
 */
+    public function registerAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        // create a task and give it some dummy data for this example
+        $user = new User();
+     //   $task->setTask('Write a blog post');
 
+        $form = $this->createFormBuilder($user)
+            ->add('email', 'text')
+            ->add('username', 'text')
+            ->add('plainPassword', 'repeated', array(
+                'first_name'  => 'password',
+                'second_name' => 'confirm',
+                'type'        => 'password',
+            ))
+            ->add('save', 'submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+           $data = $form->getData();
+
+            // cant figure out how to get passwords to hash... currently passwords are being added with plain text. trying to get the password to encrypt itself using the 5 lines below but its not working. i cant modify anything about the password. $registration->password doesnt work when i call it. I tried adding a plainPassword as well in hopes i could alter it from the form and write that back to the database after hashing but that didn't work either.
+            $factory = $this->get('security.encoder_factory');
+        //    $user = new User();
+            $encoder = $factory->getEncoder($user);
+            $password = $encoder->encodePassword('ryanpass', $data->getSalt());
+            $user->setPassword($password);
+
+
+            $em->persist($data->getUser());
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('task_success'));
+        }
+
+        return $this->render('DominickRoommateBundle:User:register.html.twig', array(
+            'form' => $form->createView(),
+        ));
+
+
+    }
+
+/*
 
     public function registerAction()
     {
@@ -93,7 +137,7 @@ class UserController extends Controller
             $factory = $this->get('security.encoder_factory');
             $user = new User();
             $encoder = $factory->getEncoder($user);
-            $password = $encoder->encodePassword('ryanpass', $user->getSalt());
+            $password = $encoder->encodePassword('ryanpass', $registration->getSalt());
             $user->setPassword($password);
 
 
@@ -108,4 +152,6 @@ class UserController extends Controller
             array('form' => $form->createView())
         );
     }
+
+*/
 }
