@@ -20,9 +20,14 @@ class User implements UserInterface, \Serializable
     public $id;
 
     /**
-     * @ORM\Column(type="string", length=25, nullable=true)
+     * @ORM\Column(type="string", length=60, unique=true)
      */
     public $username;
+
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    public $fullname;
 
     /**
      * @ORM\Column(type="string", length=64)
@@ -30,25 +35,14 @@ class User implements UserInterface, \Serializable
     public $salt;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=true)
-     */
-    public $plainPassword;
-
-    /**
      * @ORM\Column(type="string", length=64)
      */
     public $password;
 
     /**
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    public $email;
-
-    /**
      * @ORM\Column(name="is_active", type="boolean")
      */
     public $isActive;
-
 
     /**
      * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
@@ -69,13 +63,6 @@ class User implements UserInterface, \Serializable
         return $this->roles->toArray();
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
 
     /**
      * @inheritDoc
@@ -93,21 +80,6 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setPlainPassword($password)
-    {
-        $this->plainPassword = $password;
-    }
 
     /**
      * @inheritDoc
@@ -134,5 +106,111 @@ class User implements UserInterface, \Serializable
         list (
             $this->id,
             ) = unserialize($serialized);
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     * @return User
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    
+        return $this;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string 
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * Set isActive
+     *
+     * @param boolean $isActive
+     * @return User
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+    
+        return $this;
+    }
+
+    /**
+     * Get isActive
+     *
+     * @return boolean 
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * Add roles
+     *
+     * @param \Dominick\RoommateBundle\Entity\Role $roles
+     * @return User
+     */
+    public function addRole(\Dominick\RoommateBundle\Entity\Role $roles)
+    {
+        $this->roles[] = $roles;
+    
+        return $this;
+    }
+
+    /**
+     * Remove roles
+     *
+     * @param \Dominick\RoommateBundle\Entity\Role $roles
+     */
+    public function removeRole(\Dominick\RoommateBundle\Entity\Role $roles)
+    {
+        $this->roles->removeElement($roles);
     }
 }

@@ -17,16 +17,21 @@ $collection->add('dominick_roommate_admin', new Route('/admin', array(
 )));
 
 # REGISTRATION AND AUTHENTICATION
-/* Register Page
-$collection->add('dominick_roommate_register', new Route('/register', array(
-    '_controller' => 'DominickRoommateBundle:User:register',
-))); */
-
 $collection->add('account_register', new Route('/register', array(
     '_controller' => 'DominickRoommateBundle:User:register',
 )));
+$collection->add('account_login', new Route('/login', array(
+    '_controller' => 'DominickRoommateBundle:User:login',
+)));
+$collection->add('account_login_check', new Route('/login_check'));
+$collection->add('account_logout', new Route('/logout'));
+
+
+/* I don't think I need this anymore
 $collection->add('account_create', new Route('/register/create', array(
     '_controller' => 'DominickRoommateBundle:User:create',
 )));
+
+*/
 
 return $collection;

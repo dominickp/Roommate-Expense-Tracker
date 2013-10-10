@@ -7,7 +7,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Dominick\RoommateBundle\Entity\UserRepository")
  * @ORM\Table(name="user")
  */
 class User implements UserInterface, \Serializable
@@ -20,9 +20,14 @@ class User implements UserInterface, \Serializable
     public $id;
 
     /**
-     * @ORM\Column(type="string", length=25, nullable=true)
+     * @ORM\Column(type="string", length=60, unique=true)
      */
     public $username;
+
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    public $fullname;
 
     /**
      * @ORM\Column(type="string", length=64)
@@ -35,15 +40,9 @@ class User implements UserInterface, \Serializable
     public $password;
 
     /**
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    public $email;
-
-    /**
      * @ORM\Column(name="is_active", type="boolean")
      */
     public $isActive;
-
 
     /**
      * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
@@ -64,13 +63,6 @@ class User implements UserInterface, \Serializable
         return $this->roles->toArray();
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
 
     /**
      * @inheritDoc
@@ -103,6 +95,9 @@ class User implements UserInterface, \Serializable
     {
         return serialize(array(
             $this->id,
+            $this->username,
+            $this->password,
+            $this->salt,
         ));
     }
 
@@ -126,18 +121,6 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    /**
-     * Set username
-     *
-     * @param string $username
-     * @return User
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-    
-        return $this;
-    }
 
     /**
      * Set salt
@@ -166,26 +149,26 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Set email
+     * Set username
      *
-     * @param string $email
+     * @param string $username
      * @return User
      */
-    public function setEmail($email)
+    public function setUsername($username)
     {
-        $this->email = $email;
+        $this->username = $username;
     
         return $this;
     }
 
     /**
-     * Get email
+     * Get username
      *
      * @return string 
      */
-    public function getEmail()
+    public function getUsername()
     {
-        return $this->email;
+        return $this->username;
     }
 
     /**
@@ -232,5 +215,28 @@ class User implements UserInterface, \Serializable
     public function removeRole(\Dominick\RoommateBundle\Entity\Role $roles)
     {
         $this->roles->removeElement($roles);
+    }
+
+    /**
+     * Set fullname
+     *
+     * @param string $fullname
+     * @return User
+     */
+    public function setFullname($fullname)
+    {
+        $this->fullname = $fullname;
+    
+        return $this;
+    }
+
+    /**
+     * Get fullname
+     *
+     * @return string 
+     */
+    public function getFullname()
+    {
+        return $this->fullname;
     }
 }

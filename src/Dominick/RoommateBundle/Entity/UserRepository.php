@@ -1,5 +1,4 @@
 <?php
-// src/Dominick/RoommateBundle/Entity/UserRepository.php
 namespace Dominick\RoommateBundle\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -23,11 +22,11 @@ class UserRepository extends EntityRepository implements UserProviderInterface
         try {
             // The Query::getSingleResult() method throws an exception
             // if there is no record matching the criteria.
-             $user = $q->getSingleResult();
+            $user = $q->getSingleResult();
         } catch (NoResultException $e) {
             $message = sprintf(
                 'Unable to find an active admin AcmeUserBundle:User object identified by "%s".',
-            $username
+                $username
             );
             throw new UsernameNotFoundException($message, 0, $e);
         }
@@ -39,21 +38,20 @@ class UserRepository extends EntityRepository implements UserProviderInterface
     {
         $class = get_class($user);
         if (!$this->supportsClass($class)) {
-        throw new UnsupportedUserException(
-            sprintf(
-                'Instances of "%s" are not supported.',
-                $class
-            )
-        );
-    }
+            throw new UnsupportedUserException(
+                sprintf(
+                    'Instances of "%s" are not supported.',
+                    $class
+                )
+            );
+        }
 
-    return $this->find($user->getId());
+        return $this->find($user->getId());
     }
 
     public function supportsClass($class)
     {
         return $this->getEntityName() === $class
-            || is_subclass_of($class, $this->getEntityName());
+        || is_subclass_of($class, $this->getEntityName());
     }
-
 }
