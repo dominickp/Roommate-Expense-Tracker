@@ -55,6 +55,10 @@ class UserController extends Controller
             // Encrypt, then set the password. Salt is generated in the User entity.
             $user->setPassword($encoder->encodePassword($user->getPassword(), $user->getSalt()));
 
+            // SET ROLE SOMEHOW
+            // $user->getRoles()->addRole('ROLE_USER');
+
+
             // Save the new row you created when you initialized User
             $em->persist($user);
             // Fire!
