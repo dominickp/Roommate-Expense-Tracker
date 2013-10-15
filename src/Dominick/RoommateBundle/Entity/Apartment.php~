@@ -1,0 +1,42 @@
+<?php
+namespace Dominick\RoommateBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+* @ORM\Entity
+* @ORM\Table(name="apartments")
+*/
+class Apartment
+{
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    /**
+     * @ORM\Column(type="string", length=60, unique=true)
+     */
+    protected $nickname;
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    protected $address1;
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    protected $address2;
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    protected $city;
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    protected $state;
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    protected $zip;
+}

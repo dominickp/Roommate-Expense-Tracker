@@ -17,38 +17,43 @@ class User implements UserInterface, \Serializable
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    public $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=60, unique=true)
      */
-    public $username;
+    protected $username;
 
     /**
      * @ORM\Column(type="string", length=60)
      */
-    public $fullname;
+    protected $fullname;
 
     /**
      * @ORM\Column(type="string", length=64)
      */
-    public $salt;
+    protected $salt;
 
     /**
      * @ORM\Column(type="string", length=64)
      */
-    public $password;
+    protected $password;
 
     /**
      * @ORM\Column(name="is_active", type="boolean")
      */
-    public $isActive;
+    protected $isActive;
+
+    /**
+     * @ORM\Column(type="integer", name="apartment_id", nullable=true)
+     */
+    protected $apartmentId;
 
     /**
      * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
      *
      */
-    public $roles;
+    protected $roles;
 
     public function __construct()
     {
@@ -206,7 +211,6 @@ class User implements UserInterface, \Serializable
     
         return $this;
     }
-
     /**
      * Remove roles
      *
@@ -238,5 +242,28 @@ class User implements UserInterface, \Serializable
     public function getFullname()
     {
         return $this->fullname;
+    }
+
+    /**
+     * Set apartmentId
+     *
+     * @param integer $apartmentId
+     * @return User
+     */
+    public function setApartmentId($apartmentId)
+    {
+        $this->apartmentId = $apartmentId;
+    
+        return $this;
+    }
+
+    /**
+     * Get apartmentId
+     *
+     * @return integer 
+     */
+    public function getApartmentId()
+    {
+        return $this->apartmentId;
     }
 }

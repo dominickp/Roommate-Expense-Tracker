@@ -57,6 +57,10 @@ class UserController extends Controller
 
             // SET ROLE SOMEHOW
             // $user->getRoles()->addRole('ROLE_USER');
+        //    $user->getRoles();
+        //    $user->addRole('ROLE_USER');
+        //    print_r($user->getRoles());
+
 
 
             // Save the new row you created when you initialized User
@@ -65,7 +69,7 @@ class UserController extends Controller
             $em->flush();
 
             // You did a good job, billy.
-            return $this->redirect($this->generateUrl('task_success'));
+            return $this->redirect($this->generateUrl('dominick_roommate_loggedin'));
         }
 
         return $this->render('DominickRoommateBundle:User:register.html.twig', array(

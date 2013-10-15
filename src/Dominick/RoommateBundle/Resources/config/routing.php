@@ -12,7 +12,7 @@ $collection = new RouteCollection();
 $collection->add('dominick_roommate_homepage', new Route('/', array(
     '_controller' => 'DominickRoommateBundle:Default:index',
 )));
-$collection->add('dominick_roommate_admin', new Route('/admin', array(
+$collection->add('dominick_roommate_loggedin', new Route('/', array(
     '_controller' => 'DominickRoommateBundle:Default:loggedin',
 )));
 
