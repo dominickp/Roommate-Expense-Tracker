@@ -1,0 +1,13 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Roommate Expense Tracker" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            Your apartment ID is {{ app.user.apartmentId }}!
+        </div>
+    </div>
+{% endblock %}

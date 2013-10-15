@@ -114,4 +114,8 @@ class UserController extends Controller
             'error'         => $error,
         ));
     }
+    public function apartmentAction()
+    {
+        // FORM FOR CREATING NEW APARTMENT
+    }
 }
