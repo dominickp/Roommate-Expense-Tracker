@@ -145,26 +145,23 @@ class UserController extends Controller
             // Attempt to get the ID
             $aptId = $apt->getId();
 
-            // Load up the user so I can inject the apartment ID into the user's row
+            // Load up the user ID so I can inject the apartment ID into the user's row
             $currentUser = $this->get('security.context')->getToken()->getUser();
             $currentUserId = $currentUser->getId();
+            // Use the entity manager to get my User entity and find the user of the ID I have
             $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
 
-        //    if (!$entity) {
-                // Do something
-        //    }
+            if (!$user) {
+                // I'll have to figure out how to properly throw an error later. But if no user can be found with that ID, then this should be an error.
+            }
 
             //$user = new User();
-            $user
-                ->setApartmentId($aptId);
+            $user->setApartmentId($aptId);
 
             $em->persist($user);
             $em->flush();
 
-           // print_r($entity);
-
-
-            // Send to the apartment overview page
+            // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
         return $this->render('DominickRoommateBundle:User:register.html.twig', array(

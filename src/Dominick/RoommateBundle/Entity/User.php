@@ -47,7 +47,7 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="integer", name="apartment_id", nullable=true)
      */
-    public $apartmentId;
+    protected $apartmentId;
 
     /**
      * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
