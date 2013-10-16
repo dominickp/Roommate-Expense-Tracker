@@ -6,6 +6,7 @@ namespace Dominick\RoommateBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Dominick\RoommateBundle\Entity\User;
 use Dominick\RoommateBundle\Entity\Apartment;
+use Dominick\RoommateBundle\Entity\Role;
 use Symfony\Component\HttpFoundation\Response;
 
 // Login/Security
@@ -55,21 +56,16 @@ class UserController extends Controller
             $encoder = $factory->getEncoder($user);
             // Encrypt, then set the password. Salt is generated in the User entity.
             $user->setPassword($encoder->encodePassword($user->getPassword(), $user->getSalt()));
-
-            // SET ROLE SOMEHOW
-            // $user->getRoles()->addRole('ROLE_USER');
-        //    $user->getRoles();
-        //    $user->addRole('ROLE_USER');
-        //    print_r($user->getRoles());
-
-
-
+            // Set the default role for this type of registration
+            $default_role = $this->getDoctrine()->getRepository('DominickRoommateBundle:Role')->findOneBy(array('role' => 'ROLE_USER'));
+            // Call the addRole method with the role I've selected
+            $user->addRole($default_role);
             // Save the new row you created when you initialized User
             $em->persist($user);
             // Fire!
             $em->flush();
 
-            // You did a good job, billy.
+            // You did a great jerrrb.
             return $this->redirect($this->generateUrl('dominick_roommate_loggedin'));
         }
 
@@ -79,26 +75,6 @@ class UserController extends Controller
     }
     public function loginAction(Request $request)
     {
-    /*
-        $em = $this->getDoctrine()->getManager();
-        $user = new User();
-
-        $form = $this->createFormBuilder($user)
-            ->add('username', 'email')
-            ->add('password', 'password')
-            ->add('Login', 'submit')
-            ->getForm();
-
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
-
-        }
-
-        return $this->render('DominickRoommateBundle:User:login.html.twig', array(
-            'form' => $form->createView(),
-        ));
-        */
         $request = $this->getRequest();
         $session = $request->getSession();
 
