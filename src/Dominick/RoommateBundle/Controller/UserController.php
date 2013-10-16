@@ -137,10 +137,24 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $user = $form->getData();
+            $apt = $form->getData();
 
-            $em->persist($user);
+            $em->persist($apt);
             $em->flush();
+
+            // Attempt to get the ID
+            $aptId = $apt->getId();
+
+            // Load up the user so I can inject the apartment ID into the user's row
+            $user = $this->get('security.context')->getToken()->getUser();
+            $entity = $em->getRepository('DominickRoommateBundle:User')->find($user->id);
+
+            if (!$entity) {
+                // Do something
+            }
+
+            print_r($entity);
+
 
             // Send to the apartment overview page
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
