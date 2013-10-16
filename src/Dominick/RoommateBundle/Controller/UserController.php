@@ -5,6 +5,7 @@ namespace Dominick\RoommateBundle\Controller;
 // Stuff for DB insert
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Dominick\RoommateBundle\Entity\User;
+use Dominick\RoommateBundle\Entity\Apartment;
 use Symfony\Component\HttpFoundation\Response;
 
 // Login/Security
@@ -114,8 +115,38 @@ class UserController extends Controller
             'error'         => $error,
         ));
     }
-    public function apartmentAction()
+    public function apartmentAction(Request $request)
     {
-        // FORM FOR CREATING NEW APARTMENT
+        $em = $this->getDoctrine()->getManager();
+        $apt = new Apartment();
+
+        // This is how you auto fill form data
+        // $task->setTask('Write a blog post');
+
+        $form = $this->createFormBuilder($apt)
+            ->add('nickname', 'text')
+            ->add('address1', 'text')
+            ->add('address2', 'text')
+            ->add('city', 'text')
+            ->add('state', 'text')
+            ->add('zip', 'text')
+
+            ->add('save', 'submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $user = $form->getData();
+
+            $em->persist($user);
+            $em->flush();
+
+            // Send to the apartment overview page
+            return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+        }
+        return $this->render('DominickRoommateBundle:User:register.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }
