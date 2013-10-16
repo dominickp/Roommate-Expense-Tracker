@@ -146,14 +146,22 @@ class UserController extends Controller
             $aptId = $apt->getId();
 
             // Load up the user so I can inject the apartment ID into the user's row
-            $user = $this->get('security.context')->getToken()->getUser();
-            $entity = $em->getRepository('DominickRoommateBundle:User')->find($user->id);
+            $currentUser = $this->get('security.context')->getToken()->getUser();
+            $currentUserId = $currentUser->getId();
+            $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
 
-            if (!$entity) {
+        //    if (!$entity) {
                 // Do something
-            }
+        //    }
 
-            print_r($entity);
+            //$user = new User();
+            $user
+                ->setApartmentId($aptId);
+
+            $em->persist($user);
+            $em->flush();
+
+           // print_r($entity);
 
 
             // Send to the apartment overview page
