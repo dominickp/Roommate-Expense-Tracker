@@ -34,11 +34,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li {% if app.request.get('_route') == 'dominick_roommate_homepage' %}class="active"{% else %}{% endif %}><a href="#">Home</a></li>
+                    <li {% if app.request.get('_route') == 'dominick_roommate_homepage' %}class="active"{% else %}{% endif %}><a href="{{ path('dominick_roommate_homepage') }}">Home</a></li>
                     {% if app.user %}
                         <li><a href="{{ path('account_logout') }}">Logout</a></li>
                     {% else %}
-                        <li><a href="{{ path('account_login') }}">Login</a></li>
+                        <li {% if app.request.get('_route') == 'account_login' %}class="active"{% else %}{% endif %}><a href="{{ path('account_login') }}">Login</a></li>
                         <li><a href="{{ path('account_register') }}">Sign Up</a></li>
                     {% endif %}
                     <li class="dropdown">
