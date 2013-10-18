@@ -31,7 +31,10 @@ $collection->add('account_logout', new Route('/logout'));
 
 # APARTMENT REGISTRATION
 $collection->add('apartment_register', new Route('/residence/new', array(
-    '_controller' => 'DominickRoommateBundle:User:apartment',
+    '_controller' => 'DominickRoommateBundle:Apartment:newApartment',
+)));
+$collection->add('apartment_lookup', new Route('/residence/lookup', array(
+    '_controller' => 'DominickRoommateBundle:Apartment:lookupApartment',
 )));
 
 /* I don't think I need this anymore
