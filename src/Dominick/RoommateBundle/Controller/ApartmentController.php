@@ -74,4 +74,20 @@ class ApartmentController extends Controller
         'form' => $form->createView(),
         ));
     }
+    public function lookupApartmentAction(Request $request)
+    {
+        $apartment = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Apartment')
+            ->findAll();
+
+        if (!$apartment) {
+            throw $this->createNotFoundException(
+                'No results found'
+            );
+        }
+        //return var_dump($apartment);
+        return $this->render('DominickRoommateBundle:Apartment:lookupapartment.html.twig', array(
+            'results' => $apartment,
+        ));
+    }
 }

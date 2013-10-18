@@ -1,0 +1,43 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Lookup an Apartment" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Lookup an Apartment</h3>
+            <p>See your apartment listed below? It's possible that one of your roommates already created it in the system. If that is the case, please select it below to register yourself as a roommate.</p>
+            <table class="table table-bordered table-hover table table-condensed">
+                <tr>
+                    <th>Nick Name</th>
+                    <th>Address</th>
+                    <th>Roommates</th>
+                    <th>Select</th>
+                </tr>
+            {% for apartment in results %}
+                <tr>
+                    <td>{{ apartment.nickname }}</td>
+                    <td>
+                        <small>
+                        {{ apartment.address1 }}
+                            {% if apartment.address2 is not empty %}, {{ apartment.address2 }}{% endif %}
+                            <br>
+                        {{ apartment.city }}, {{ apartment.state }} {{ apartment.zip }}
+                        </small>
+                    </td>
+                    <td>Roommates</td>
+                    <td>Join</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3>Don't see your apartment?</h3>
+            <p>No worries. Click the button below to go register a new one.
+            <p><a class="btn btn-primary" href="{{ path('apartment_register') }}">Register New Apartment</a></p>
+        </div>
+    </div>
+{% endblock %}
+
