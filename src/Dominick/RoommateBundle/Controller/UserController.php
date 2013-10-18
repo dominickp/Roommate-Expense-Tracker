@@ -37,7 +37,7 @@ class UserController extends Controller
                 'second_name' => 'confirm',
                 'type'        => 'password',
             ))
-            ->add('save', 'submit')
+            ->add('Register', 'submit')
             ->getForm();
 
         // If initially loading the page, handleRequest() recognizes that the form was not submitted and does nothing.
@@ -107,7 +107,7 @@ class UserController extends Controller
             ->add('state', 'text')
             ->add('zip', 'text')
 
-            ->add('save', 'submit')
+            ->add('Save', 'submit')
             ->getForm();
 
         $form->handleRequest($request);
@@ -140,7 +140,7 @@ class UserController extends Controller
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
-        return $this->render('DominickRoommateBundle:User:register.html.twig', array(
+        return $this->render('DominickRoommateBundle:Apartment:newapartment.html.twig', array(
             'form' => $form->createView(),
         ));
     }

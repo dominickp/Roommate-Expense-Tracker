@@ -40,6 +40,14 @@ class DefaultController extends Controller
 
     public function loggedinAction()
     {
-        return $this->render('DominickRoommateBundle:Default:loggedin.html.twig', array());
+        $user = $this->getUser();
+        $apartmentId = $user->getApartmentId();
+        // Send to create apartment if not assigned
+        if(empty($apartmentId)){
+            return $this->redirect($this->generateUrl('apartment_register'));
+            // Send to index if they already have an apartment
+        } else {
+            return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+        }
     }
 }
