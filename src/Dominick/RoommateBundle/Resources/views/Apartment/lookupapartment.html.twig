@@ -28,7 +28,7 @@
                         </small>
                     </td>
                     <td>Roommates</td>
-                    <td>Join</td>
+                    <td><a href="{{ path('apartment_set', {'id': apartment.id }) }}" class="btn btn-primary">Set as apartment</a></td>
                 </tr>
             {% endfor %}
             </table>

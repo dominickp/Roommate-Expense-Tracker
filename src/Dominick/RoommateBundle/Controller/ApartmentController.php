@@ -42,33 +42,31 @@ class ApartmentController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
-        $apt = $form->getData();
+        if ($form->isValid())
+        {
+            $apt = $form->getData();
+            $em->persist($apt);
+            $em->flush();
+            // Attempt to get the ID
+            $aptId = $apt->getId();
+        /* NOW USING NEW FUNCTION setApartmentIdAction FOR THIS
+            // Load up the user ID so I can inject the apartment ID into the user's row
+            $currentUser = $this->get('security.context')->getToken()->getUser();
+            $currentUserId = $currentUser->getId();
+            // Use the entity manager to get my User entity and find the user of the ID I have
+            $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
+            if (!$user) {
+            // I'll have to figure out how to properly throw an error later. But if no user can be found with that ID, then this should be an error.
+            }
+            //$user = new User();
+            $user->setApartmentId($aptId);
+            $em->persist($user);
+            $em->flush();
+        */
+            $this->setApartmentIdAction($aptId);
 
-        $em->persist($apt);
-        $em->flush();
-
-        // Attempt to get the ID
-        $aptId = $apt->getId();
-
-        // Load up the user ID so I can inject the apartment ID into the user's row
-        $currentUser = $this->get('security.context')->getToken()->getUser();
-        $currentUserId = $currentUser->getId();
-        // Use the entity manager to get my User entity and find the user of the ID I have
-        $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
-
-        if (!$user) {
-        // I'll have to figure out how to properly throw an error later. But if no user can be found with that ID, then this should be an error.
-        }
-
-        //$user = new User();
-        $user->setApartmentId($aptId);
-
-        $em->persist($user);
-        $em->flush();
-
-        // Send to the apartment overview page, now that the apartment has been created an tied to them.
-        return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+            // Send to the apartment overview page, now that the apartment has been created an tied to them.
+            return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
         return $this->render('DominickRoommateBundle:Apartment:newapartment.html.twig', array(
         'form' => $form->createView(),
@@ -89,5 +87,23 @@ class ApartmentController extends Controller
         return $this->render('DominickRoommateBundle:Apartment:lookupapartment.html.twig', array(
             'results' => $apartment,
         ));
+    }
+    public function setApartmentIdAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        // Load up the user ID so I can inject the apartment ID into the user's row
+        $currentUser = $this->get('security.context')->getToken()->getUser();
+        $currentUserId = $currentUser->getId();
+        // Use the entity manager to get my User entity and find the user of the ID I have
+        $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
+
+        //$user = new User();
+        $user->setApartmentId($id);
+
+        $em->persist($user);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('dominick_roommate_loggedin'));
     }
 }

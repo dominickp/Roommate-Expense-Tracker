@@ -42,13 +42,11 @@
                         <li {% if app.request.get('_route') == 'account_register' %}class="active"{% else %}{% endif %}><a href="{{ path('account_register') }}">Sign Up</a></li>
                     {% endif %}
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="#">Edit account</a></li>
+                            <li><a href="{{ path('apartment_register') }}">Create new apartment</a></li>
+                            <li><a href="{{ path('apartment_lookup') }}">Lookup existing apartments</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -36,6 +36,9 @@ $collection->add('apartment_register', new Route('/residence/new', array(
 $collection->add('apartment_lookup', new Route('/residence/lookup', array(
     '_controller' => 'DominickRoommateBundle:Apartment:lookupApartment',
 )));
+$collection->add('apartment_set', new Route('/residence/set/{id}', array(
+    '_controller' => 'DominickRoommateBundle:Apartment:setApartmentId',
+)));
 
 /* I don't think I need this anymore
 $collection->add('account_create', new Route('/register/create', array(

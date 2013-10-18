@@ -25,6 +25,7 @@ class DefaultController extends Controller
                 return $this->redirect($this->generateUrl('apartment_register'));
             // Send to index if they already have an apartment
             } else {
+
                 return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
             }
         } else {
@@ -34,7 +35,17 @@ class DefaultController extends Controller
     }
     public function apartmenthomeAction()
     {
-        return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array());
+        // Get apartment info
+        $user = $this->getUser();
+        $apartmentId = $user->getApartmentId();
+        $apartment = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Apartment')
+            ->find($apartmentId);
+
+        return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array(
+            'apartment' => $apartment,
+        ));
+        //return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array());
     }
 
 

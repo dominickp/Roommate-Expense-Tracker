@@ -7,7 +7,12 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12">
-            Your apartment ID is {{ app.user.apartmentId }}!
+            <h3 id="{{ app.user.apartmentId }}">
+
+                {{ apartment.nickname }} <p><small>{{ apartment.address1 }}, {{ apartment.address2 }}, {{ apartment.city }}, {{ apartment.state }} {{ apartment.zip }}</small></p>
+            </h3>
+
+            {{ dump(apartment) }}
         </div>
     </div>
 {% endblock %}
