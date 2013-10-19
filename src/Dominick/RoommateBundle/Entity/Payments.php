@@ -5,9 +5,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="expense")
+ * @ORM\Table(name="payment")
  */
-class Expense
+class Payment
 {
     /**
      * @ORM\Column(type="integer")
@@ -26,19 +26,11 @@ class Expense
     /**
      * @ORM\Column(type="string", length=60, nullable=true)
      */
-    protected $description;
-    /**
-     * @ORM\Column(type="string", length=60, nullable=false)
-     */
-    protected $token;
-    /**
-     * @ORM\Column(type="string", length=60, nullable=true)
-     */
-    protected $type;
+    protected $method;
     /**
      * @ORM\Column(type="numeric", length=16, nullable=false)
      */
-    protected $cost;
+    protected $amount;
     /**
      * @ORM\Column(type="datetime", strategy="AUTO")
      */
