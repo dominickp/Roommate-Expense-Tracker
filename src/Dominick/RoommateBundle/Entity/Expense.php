@@ -36,11 +36,11 @@ class Expense
      */
     protected $type;
     /**
-     * @ORM\Column(type="numeric", length=16, nullable=false)
+     * @ORM\Column(type="decimal", length=16, nullable=false)
      */
     protected $cost;
     /**
-     * @ORM\Column(type="datetime", strategy="AUTO")
+     * @ORM\Column(type="datetime")
      */
     protected $timestamp;
 }
