@@ -43,6 +43,9 @@ $collection->add('apartment_set', new Route('/residence/set/{id}', array(
 # EXPENSES
 $collection->add('expense_new', new Route('/expense/new/', array(
     '_controller' => 'DominickRoommateBundle:Expense:newExpense',
+)))
+;$collection->add('expense_browse', new Route('/expense/browse/', array(
+    '_controller' => 'DominickRoommateBundle:Expense:browseExpense',
 )));
 
 /* I don't think I need this anymore

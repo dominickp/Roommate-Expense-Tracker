@@ -45,6 +45,13 @@
                                 <li><a href="{{ path('apartment_lookup') }}">Lookup existing apartments</a></li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Expenses <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('expense_new') }}">New expense</a></li>
+                                <li><a href="{{ path('expense_browse') }}">Browse expenses</a></li>
+                            </ul>
+                        </li>
                     {% else %}
                         <li {% if app.request.get('_route') == 'account_login' %}class="active"{% else %}{% endif %}><a href="{{ path('account_login') }}">Login</a></li>
                         <li {% if app.request.get('_route') == 'account_register' %}class="active"{% else %}{% endif %}><a href="{{ path('account_register') }}">Sign Up</a></li>

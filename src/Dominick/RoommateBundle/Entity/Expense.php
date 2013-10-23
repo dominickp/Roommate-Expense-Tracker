@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="expense")
+ * @ORM\HasLifecycleCallbacks
  */
 class Expense
 {
@@ -43,6 +44,20 @@ class Expense
      * @ORM\Column(type="datetime")
      */
     protected $timestamp;
+
+    public function __construct()
+    {
+        $this->created = new \DateTime("now");
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function setUpdated()
+    {
+        $this->timestamp = new \DateTime("now");
+    }
 
     /**
      * Get id
@@ -201,7 +216,7 @@ class Expense
     public function setTimestamp($timestamp)
     {
         $this->timestamp = $timestamp;
-    
+
         return $this;
     }
 

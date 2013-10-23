@@ -30,6 +30,11 @@ class ExpenseController extends Controller
         // This is how you auto fill form data
         // $task->setTask('Write a blog post');
 
+        // Load up the user & apartment IDs so I can use it for the new expense
+        $currentUser = $this->get('security.context')->getToken()->getUser();
+        $currentUserId = $currentUser->getId();
+        $currentApartmentId = $currentUser->getApartmentId();
+
         $form = $this->createFormBuilder($exp)
             ->add('description', 'text')
             ->add('type', 'choice', array(
@@ -47,12 +52,20 @@ class ExpenseController extends Controller
         if ($form->isValid())
         {
             $exp = $form->getData();
+
+            // Set user/apartment IDs before submitting the new expense
+            $exp->setUserId($currentUserId);
+            $exp->setApartmentId($currentApartmentId);
+
+            // Set time because Doctrine sucks
+            //$exp->setTimestamp($exp->setUpdated);
+
+            // Generate a token value so this expense can be referenced later
+            $exp->setToken(substr(md5($exp->getDescription().time()), 0, 8));
+
+
             $em->persist($exp);
             $em->flush();
-            // Attempt to get the ID
-            $aptId = $exp->getId();
-
-            $this->setApartmentIdAction($aptId);
 
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
@@ -61,20 +74,49 @@ class ExpenseController extends Controller
             'form' => $form->createView(),
         ));
     }
-    public function lookupApartmentAction(Request $request)
+    public function browseExpenseAction(Request $request)
     {
-        $apartment = $this->getDoctrine()
-            ->getRepository('DominickRoommateBundle:Apartment')
+        // Load up the user & apartment IDs so I can use it for limiting the browse results
+        $currentUser = $this->get('security.context')->getToken()->getUser();
+        $currentUserId = $currentUser->getId();
+        $currentApartmentId = $currentUser->getApartmentId();
+
+        $aptexpense = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Expense')
+            //->findAll();
+            ->findBy(
+                array('userId' => $currentUserId),  // $where
+                array('timestamp' => 'ASC'),        // $orderBy
+                999,                                  // $limit
+                0                                   // $offset
+            );
+
+        // Tally some totals
+        $totals = array(
+            'cost'       => 0,
+            'expenses'   => 0
+        );
+        foreach($aptexpense as $exp){
+            $totals['cost'] += $exp->getCost();
+            $totals['expenses']++;
+        }
+
+        if (!$aptexpense) {
+            return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
+                'results' => '',
+            ));
+        }
+
+        // Get $users so I can pass it to the view
+        $users =  $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:User')
             ->findAll();
 
-        if (!$apartment) {
-            throw $this->createNotFoundException(
-                'No results found'
-            );
-        }
-        //return var_dump($apartment);
-        return $this->render('DominickRoommateBundle:Apartment:lookupapartment.html.twig', array(
-            'results' => $apartment,
+        //return var_dump($aptexpense);
+        return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
+            'results' => $aptexpense,
+            'totals' => $totals,
+            'users' => $users,
         ));
     }
 }
