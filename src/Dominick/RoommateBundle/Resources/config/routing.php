@@ -40,6 +40,11 @@ $collection->add('apartment_set', new Route('/residence/set/{id}', array(
     '_controller' => 'DominickRoommateBundle:Apartment:setApartmentId',
 )));
 
+# EXPENSES
+$collection->add('expense_new', new Route('/expense/new/', array(
+    '_controller' => 'DominickRoommateBundle:Expense:newExpense',
+)));
+
 /* I don't think I need this anymore
 $collection->add('account_create', new Route('/register/create', array(
     '_controller' => 'DominickRoommateBundle:User:create',

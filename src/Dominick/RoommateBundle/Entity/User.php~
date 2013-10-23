@@ -61,6 +61,9 @@ class User implements UserInterface, \Serializable
         $this->salt = md5(uniqid(null, true));
     //    $this->password = $this->plainPassword;
         $this->roles = new ArrayCollection();
+    //    $this->addRole('ROLE_USER');
+
+    //    $this->roles = new ArrayCollection(array('ROLE_USER'));
     }
 
     public function getRoles()
@@ -207,7 +210,8 @@ class User implements UserInterface, \Serializable
      */
     public function addRole(\Dominick\RoommateBundle\Entity\Role $roles)
     {
-        $this->roles[] = $roles;
+        //$this->roles[] = $roles;
+        $this->roles->add($roles);
     
         return $this;
     }
