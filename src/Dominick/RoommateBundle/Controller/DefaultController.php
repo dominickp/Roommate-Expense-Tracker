@@ -53,9 +53,9 @@ class DefaultController extends Controller
     public function loggedinAction()
     {
         $user = $this->getUser();
-        $apartmentId = $user->getApartmentId();
+        $apartment = $user->getApartment();
         // Send to create apartment if not assigned
-        if (empty($apartmentId)) {
+        if (empty($apartment)) {
             return $this->redirect($this->generateUrl('apartment_register'));
             // Send to index if they already have an apartment
         } else {
