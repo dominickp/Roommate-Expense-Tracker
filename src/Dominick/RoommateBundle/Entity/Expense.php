@@ -119,13 +119,32 @@ class Expense
     }
 
     /**
+     * @param int $apartmentId
+     * @return $this
+     */
+    public function setApartmentId($apartmentId)
+    {
+        $this->apartmentId = $apartmentId;
+        
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+        public function getApartmentId()
+        {
+            return $this->apartmentId;
+        }
+
+    /**
      * @param int $id
      * @return $this
      */
     public function setId($id)
     {
         $this->id = $id;
-        
+
         return $this;
     }
 

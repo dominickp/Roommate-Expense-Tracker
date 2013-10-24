@@ -6,7 +6,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <h3>
 
                 {{ apartment.nickname }}
@@ -18,6 +18,14 @@
 
             <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>
             <a class="btn btn-primary" href="{{ path('expense_browse') }}">Browse Expenses</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Roommates</h3>
+            {% for roommate in roommates %}
+                <ul class="list-unstyled">
+                    <li>{{ roommate.fullname }}</li>
+                </ul>
+            {% endfor %}
         </div>
 
     </div>

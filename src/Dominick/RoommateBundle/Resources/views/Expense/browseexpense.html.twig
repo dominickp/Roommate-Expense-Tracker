@@ -10,7 +10,7 @@
             <h3>Lookup an Expenses</h3>
 
             <p>Check out the history of expenses for your apartment.</p>
-            {% if expense is defined %}
+            {% if expenses is defined %}
                 <table class="table table-bordered table-hover table table-condensed">
                     <tr>
                         <th>Roommate</th>
@@ -30,7 +30,7 @@
                         </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan=2"><strong>Total</strong></td>
+                        <td class="text-right" colspan=3"><strong>Total</strong></td>
                         <td>$ {{ totals.cost|number_format(2, '.', ',') }}</td>
                         <td></td>
                     </tr>

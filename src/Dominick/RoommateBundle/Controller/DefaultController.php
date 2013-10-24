@@ -42,9 +42,22 @@ class DefaultController extends Controller
         // Get apartment info
         $user = $this->getUser();
         $apartment = $user->getApartment();
+        $currentApartmentId = $apartment->getId();
+
+        // Get roommate info from
+        $roommates = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:User')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
 
         return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array(
             'apartment' => $apartment,
+            'roommates' => $roommates,
         ));
         //return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array());
     }

@@ -54,12 +54,11 @@ class ExpenseController extends Controller
         if ($form->isValid()) {
             $exp = $form->getData();
 
-            // Set user/apartment IDs before submitting the new expense
+            // Set user
             $exp->setUser($currentUser);
-            //$exp->setApartmentId($currentApartmentId);
 
-            // Set time because Doctrine sucks
-            //$exp->setTimestamp($exp->setUpdated);
+            // Set the apartmentId
+            $exp->setApartmentId($currentApartment->getId());
 
             // Generate a token value so this expense can be referenced later
             $exp->setToken(substr(md5($exp->getDescription() . time()), 0, 8));
@@ -81,18 +80,19 @@ class ExpenseController extends Controller
         //$securityContext = $this->get('security.context');
         $securityContext = $this->container->get('security.context');
         $currentUser = $this->getUser();
-        //$currentApartmentId = $currentUser->getApartmentId();
+        $currentApartmentId = $currentUser->getApartment()->getId();
 
-        $aptexpense = $this->getDoctrine()
+        $aptExpense = $this->getDoctrine()
             ->getRepository('DominickRoommateBundle:Expense')
-            //->findAll();
+        //    ->findAll();
             ->findBy(
-                array('user' => $currentUser), // $where
+                array('apartmentId' => $currentApartmentId), // $where
                 array('created' => 'ASC'), // $orderBy
                 999, // $limit
                 0 // $offset
             );
 
+   //     var_dump($aptExpense);
         $users = $this->getDoctrine()
             ->getRepository('DominickRoommateBundle:User')
             ->findAll();
@@ -103,14 +103,14 @@ class ExpenseController extends Controller
             'cost' => 0,
             'expenses' => 0
         );
-        foreach ($aptexpense as $exp) {
+        foreach ($aptExpense as $exp) {
             $totals['cost'] += $exp->getCost();
             $totals['expenses']++;
         }
 
-        if (!$aptexpense) {
+        if (!$aptExpense) {
             return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
-                'results' => '',
+             //   'results' => '',
             ));
         }
 
@@ -119,9 +119,9 @@ class ExpenseController extends Controller
 //            ->getRepository('DominickRoommateBundle:User')
 //            ->findAll();
 
-        //return var_dump($aptexpense);
+        //return var_dump($aptExpense);
         return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
-            'expenses' => $aptexpense,
+            'expenses' => $aptExpense,
             'totals' => $totals,
             'users' => $users,
         ));
