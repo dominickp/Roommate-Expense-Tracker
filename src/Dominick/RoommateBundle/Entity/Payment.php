@@ -15,9 +15,11 @@ class Payment
     private $id;
 
     /**
-     * @var integer
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="payments")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @var User
      */
-    private $userId;
+    protected $user;
 
     /**
      * @var integer
@@ -35,9 +37,21 @@ class Payment
     private $amount;
 
     /**
+     * @ORM\Column(type="datetime")
      * @var \DateTime
      */
-    private $timestamp;
+    protected $created;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    protected $updated;
+
+    public function __construct()
+    {
+        $this->created = new \DateTime("now");
+    }
 
 
     /**
@@ -163,5 +177,52 @@ class Payment
     public function getTimestamp()
     {
         return $this->timestamp;
+    }
+
+    /**
+     * @param \Dominick\RoommateBundle\Entity\User $user
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return \Dominick\RoommateBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     * @return $this
+     */
+    public function setUpdated()
+    {
+        $this->updated = new \DateTime("now");
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 }
