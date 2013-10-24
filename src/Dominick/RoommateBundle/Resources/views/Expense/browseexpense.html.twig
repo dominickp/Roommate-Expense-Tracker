@@ -21,7 +21,7 @@
                 {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
                 {% for expense in expenses %}
                     <tr>
-                        <td>{{ expense.getUser().getUsername() }}</td>
+                        <td>{{ expense.getUser().getFullname() }}</td>
                         <td>{{ expense.token }}</td>
                         <td>{{ expense.description }}</td>
                         <td>$ {{ expense.cost|number_format(2, '.', ',') }}</td>

@@ -94,6 +94,11 @@ class ExpenseController extends Controller
                 0 // $offset
             );
 
+        $users = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:User')
+            ->findAll();
+
+
         // Tally some totals
         $totals = array(
             'cost' => 0,
@@ -119,7 +124,7 @@ class ExpenseController extends Controller
         return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
             'expenses' => $aptexpense,
             'totals' => $totals,
-            //'users' => $users,
+            'users' => $users,
         ));
     }
 }

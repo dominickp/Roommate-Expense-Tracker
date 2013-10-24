@@ -24,7 +24,8 @@ class UserController extends Controller
 
     public function registerAction()
     {
-        $request = $this->getRequest();
+        //$request = $this->getRequest();
+        $request = $this->container->get('request');
         $session = $request->getSession();
         $session->start();
 
@@ -48,10 +49,11 @@ class UserController extends Controller
         // When the user submits the form, handleRequest() recognizes this and immediately writes the submitted data
         // back into the task and dueDate properties of the $task object.
         $form->handleRequest($request);
-
+        //var_dump($form);
         // If the form is valid, we should be submitting the data, right?
         if ($form->isValid())
         {
+
 
             $user = $form->getData();
 
@@ -68,7 +70,7 @@ class UserController extends Controller
             // Set the default role for this type of registration
             $default_role = $this->getDoctrine()->getRepository('DominickRoommateBundle:Role')->findOneBy(array('role' => 'ROLE_USER'));
             // Call the addRole method with the role I've selected
-            $this->addRole($default_role);
+            $user->addRole($default_role);
 
             // Get the entity manager
             $em = $this->getDoctrine()->getManager();
