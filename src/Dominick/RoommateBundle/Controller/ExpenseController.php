@@ -77,11 +77,19 @@ class ExpenseController extends Controller
     public function browseExpenseAction()
     {
         // Load up the user & apartment IDs so I can use it for limiting the browse results
-        //$securityContext = $this->get('security.context');
         $securityContext = $this->container->get('security.context');
         $currentUser = $this->getUser();
         $currentApartmentId = $currentUser->getApartment()->getId();
 
+        // Tally some totals which I'll use later
+        $totals = array(
+            'cost' => 0,
+            'expenses' => 0,
+            'roommates' => 0,
+            'roommateCost' => 0
+        );
+
+        // Pull all of the expenses tied to this apartment
         $aptExpense = $this->getDoctrine()
             ->getRepository('DominickRoommateBundle:Expense')
         //    ->findAll();
@@ -92,34 +100,36 @@ class ExpenseController extends Controller
                 0 // $offset
             );
 
-   //     var_dump($aptExpense);
+        // Pull User to use for converting IDs to names in the view
         $users = $this->getDoctrine()
             ->getRepository('DominickRoommateBundle:User')
-            ->findAll();
+        //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
 
+        // To calculate stuff like the cost per roommate, I'll need to tally the number of roommates
+        $totals['roommates'] = count($users);
 
-        // Tally some totals
-        $totals = array(
-            'cost' => 0,
-            'expenses' => 0
-        );
-        foreach ($aptExpense as $exp) {
+        // Iterate through the expenses to tally totals and set cost per roommate
+        foreach ($aptExpense as &$exp) {
             $totals['cost'] += $exp->getCost();
             $totals['expenses']++;
+            $exp->perRoommateCost = $exp->getCost()/$totals['roommates'];
+            $totals['roommateCost'] += $exp->perRoommateCost;
         }
 
+        // If there are no expenses, send to the same view without the variable
         if (!$aptExpense) {
             return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
              //   'results' => '',
             ));
         }
 
-        // Get $users so I can pass it to the view
-//        $users = $this->getDoctrine()
-//            ->getRepository('DominickRoommateBundle:User')
-//            ->findAll();
-
-        //return var_dump($aptExpense);
+        // If we have expenses, send all the data to the view
         return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
             'expenses' => $aptExpense,
             'totals' => $totals,

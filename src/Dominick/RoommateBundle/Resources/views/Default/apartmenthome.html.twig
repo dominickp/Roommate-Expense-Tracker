@@ -18,6 +18,15 @@
 
             <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>
             <a class="btn btn-primary" href="{{ path('expense_browse') }}">Browse Expenses</a>
+
+            <hr>
+
+            <p>Apartment total: $500</p>
+            <p>Roommate average (target, apartmentTotalExpenses / numOfRoommates): $250</p>
+            <p>Your total paid (sum of expenses with my apartment id/user): $400</p>
+            <p>Your balance (totalPaid - roommateAverage): +$150</p>
+
+            <p>If your balance is positive, then you need to be paid. If its negative, you need to pay other roommates or register a new expense to lower it. The payment controller will have to pull in the balances for all other roommates, then let determine which you would like to pay to bring down your balance until its 0 or positive.</p>
         </div>
         <div class="col-md-4">
             <h3>Roommates</h3>

@@ -7,31 +7,32 @@
 {% block content %}
     <div class="row">
         <div class="col-md-8">
-            <h3>Lookup an Expenses</h3>
+            <h3>Lookup Expenses</h3>
 
             <p>Check out the history of expenses for your apartment.</p>
             {% if expenses is defined %}
                 <table class="table table-bordered table-hover table table-condensed">
                     <tr>
                         <th>Roommate</th>
-                        <th>Token</th>
                         <th>Description</th>
-                        <th>Cost</th>
+                        <th class="text-right">Total Cost</th>
+                        <th class="text-right">Roommate Cost</th>
                         <th>Date</th>
                     </tr>
                     {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
                     {% for expense in expenses %}
-                        <tr>
+                        <tr id="{{ expense.token }}">
                             <td>{{ expense.getUser().getFullname() }}</td>
-                            <td>{{ expense.token }}</td>
                             <td>{{ expense.description }}</td>
-                            <td>$ {{ expense.cost|number_format(2, '.', ',') }}</td>
+                            <td class="text-right">$ {{ expense.cost|number_format(2, '.', ',') }}</td>
+                            <td class="text-right">$ {{ expense.perRoommateCost|number_format(2, '.', ',') }}</td>
                             <td>{{ expense.created|date('Y-m-d') }}</td>
                         </tr>
                     {% endfor %}
                     <tr>
-                        <td class="text-right" colspan=3"><strong>Total</strong></td>
-                        <td>$ {{ totals.cost|number_format(2, '.', ',') }}</td>
+                        <td class="text-right" colspan=2"><strong>Expense Totals</strong></td>
+                        <td class="text-right">$ {{ totals.cost|number_format(2, '.', ',') }}</td>
+                        <td class="text-right">$ {{ totals.roommateCost|number_format(2, '.', ',') }}</td>
                         <td></td>
                     </tr>
                 </table>
