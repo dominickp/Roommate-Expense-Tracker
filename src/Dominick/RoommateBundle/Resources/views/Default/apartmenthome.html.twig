@@ -15,9 +15,10 @@
                         , {{ apartment.state }} {{ apartment.zip }}</small>
                 </p>
             </h3>
+
+            <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>
+            <a class="btn btn-primary" href="{{ path('expense_browse') }}">Browse Expenses</a>
         </div>
-        <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>
-        <a class="btn btn-primary" href="{{ path('expense_browse') }}">Browse Expenses</a>
 
     </div>
 {% endblock %}

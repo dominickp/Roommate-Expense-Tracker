@@ -23,7 +23,7 @@ class ExpenseController extends Controller
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
 
-    public function newExpenseAction()
+    public function newExpenseAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $exp = new Expense();
@@ -33,9 +33,9 @@ class ExpenseController extends Controller
 
         // Load up the user & apartment IDs so I can use it for the new expense
         $securityContext = $this->get('security.context');
-        $currentUser = $securityContext->getUser();
-        $currentUserId = $currentUser->getId();
-        //$currentApartmentId = $currentUser->getApartmentId();
+        //$currentUser = $securityContext->getUser();
+        $currentUser = $this->getUser();
+        $currentApartment = $currentUser->getApartment();
 
         $form = $this->createFormBuilder($exp)
             ->add('description', 'text')
@@ -63,7 +63,6 @@ class ExpenseController extends Controller
 
             // Generate a token value so this expense can be referenced later
             $exp->setToken(substr(md5($exp->getDescription() . time()), 0, 8));
-
 
             $em->persist($exp);
             $em->flush();
