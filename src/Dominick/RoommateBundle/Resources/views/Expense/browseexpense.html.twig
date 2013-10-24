@@ -8,6 +8,7 @@
     <div class="row">
         <div class="col-md-8">
             <h3>Lookup an Expenses</h3>
+
             <p>Check out the history of expenses for your apartment.</p>
             <table class="table table-bordered table-hover table table-condensed">
                 <tr>
@@ -17,10 +18,10 @@
                     <th>Cost</th>
                     <th>Date</th>
                 </tr>
-                {% for user in users %}{{ user.getFullname() }}{% endfor %}
-                {% for expense in results %}
+                {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
+                {% for expense in expenses %}
                     <tr>
-                        <td>{{ expense.userId }}</td>
+                        <td>{{ expense.getUser().getUsername() }}</td>
                         <td>{{ expense.token }}</td>
                         <td>{{ expense.description }}</td>
                         <td>$ {{ expense.cost|number_format(2, '.', ',') }}</td>
@@ -28,7 +29,8 @@
                     </tr>
                 {% endfor %}
                 <tr>
-                    <td colspan=2"><strong>Total</strong></td>
+                    <td colspan=2
+                    "><strong>Total</strong></td>
                     <td>$ {{ totals.cost|number_format(2, '.', ',') }}</td>
                     <td></td>
                 </tr>
@@ -36,7 +38,9 @@
         </div>
         <div class="col-md-4">
             <h3>Need to add a new expense?</h3>
+
             <p>No worries. Click the button below to go add a new one.
+
             <p><a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a></p>
         </div>
     </div>

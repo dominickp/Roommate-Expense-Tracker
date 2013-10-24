@@ -1,5 +1,5 @@
 <?php
-namespace Dominick\RoommateBundle\Entity;
+namespace Dominick\RoommateBundle\Repository;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\NoResultException;
 
-class UserRepository extends EntityRepository implements UserProviderInterface
+class Users extends EntityRepository implements UserProviderInterface
 {
     public function loadUserByUsername($username)
     {

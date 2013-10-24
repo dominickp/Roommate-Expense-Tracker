@@ -43,7 +43,7 @@ class Payment
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,14 +59,14 @@ class Payment
     public function setUserId($userId)
     {
         $this->userId = $userId;
-    
+
         return $this;
     }
 
     /**
      * Get userId
      *
-     * @return integer 
+     * @return integer
      */
     public function getUserId()
     {
@@ -82,14 +82,14 @@ class Payment
     public function setApartmentId($apartmentId)
     {
         $this->apartmentId = $apartmentId;
-    
+
         return $this;
     }
 
     /**
      * Get apartmentId
      *
-     * @return integer 
+     * @return integer
      */
     public function getApartmentId()
     {
@@ -105,14 +105,14 @@ class Payment
     public function setMethod($method)
     {
         $this->method = $method;
-    
+
         return $this;
     }
 
     /**
      * Get method
      *
-     * @return string 
+     * @return string
      */
     public function getMethod()
     {
@@ -128,14 +128,14 @@ class Payment
     public function setAmount($amount)
     {
         $this->amount = $amount;
-    
+
         return $this;
     }
 
     /**
      * Get amount
      *
-     * @return float 
+     * @return float
      */
     public function getAmount()
     {
@@ -151,14 +151,14 @@ class Payment
     public function setTimestamp($timestamp)
     {
         $this->timestamp = $timestamp;
-    
+
         return $this;
     }
 
     /**
      * Get timestamp
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getTimestamp()
     {

@@ -10,29 +10,32 @@
             {{ form_start(form) }}
             {{ form_errors(form) }}
 
-                {{ form_label(form.fullname, 'Full Name') }}
-                {{ form_errors(form.fullname) }}
-                {{ form_widget(form.fullname, {'attr': {'class': 'form-control'}}) }}
+            {{ form_label(form.fullname, 'Full Name') }}
+            {{ form_errors(form.fullname) }}
+            {{ form_widget(form.fullname, {'attr': {'class': 'form-control' }}) }}
 
-                {{ form_label(form.username, 'Email') }}
-                {{ form_errors(form.username) }}
-                {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+            {{ form_label(form.username, 'Email') }}
+            {{ form_errors(form.username) }}
+            {{ form_widget(form.username, {'attr': {'class': 'form-control' }}) }}
 
-                {{ form_errors(form.password) }}
+            {{ form_errors(form.password) }}
 
-                {% for passwordField in form.password %}
-                    <div class="form-field">
-                        {{ form_label(passwordField, null, { 'attr': {'class': 'form-label'} }) }}
-                        {{ form_widget(passwordField, { 'attr': {'class': 'form-control'} }) }}
-                    </div>
-                {% endfor %}
+            {% for passwordField in form.password %}
+                <div class="form-field">
+                    {{ form_label(passwordField, null, { 'attr': {'class': 'form-label'} }) }}
+                    {{ form_widget(passwordField, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            {% endfor %}
             <br>
-            <p>{{ form_widget(form.Register, {'attr': {'class': 'btn btn-primary'}}) }}</p>
+
+            <p>{{ form_widget(form.Register, {'attr': {'class': 'btn btn-primary' }}) }}</p>
             {{ form_end(form) }}
         </div>
         <div class="col-md-8">
             <h3>Thank you for signing up!</h3>
-            <p>It should just take a sec. Please enter your full name and email. Your email address acts as your user name, so please make sure it's a valid one.</p>
+
+            <p>It should just take a sec. Please enter your full name and email. Your email address acts as your user
+                name, so please make sure it's a valid one.</p>
         </div>
     </div>
 {% endblock %}

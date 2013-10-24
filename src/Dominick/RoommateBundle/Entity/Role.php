@@ -51,7 +51,7 @@ class Role implements RoleInterface
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -67,14 +67,14 @@ class Role implements RoleInterface
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -90,7 +90,7 @@ class Role implements RoleInterface
     public function setRole($role)
     {
         $this->role = $role;
-    
+
         return $this;
     }
 
@@ -103,7 +103,7 @@ class Role implements RoleInterface
     public function addUser(\Dominick\RoommateBundle\Entity\User $users)
     {
         $this->users[] = $users;
-    
+
         return $this;
     }
 
@@ -120,7 +120,7 @@ class Role implements RoleInterface
     /**
      * Get users
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getUsers()
     {

@@ -4,9 +4,9 @@ namespace Dominick\RoommateBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
-* @ORM\Entity
-* @ORM\Table(name="apartments")
-*/
+ * @ORM\Entity
+ * @ORM\Table(name="apartments")
+ */
 class Apartment
 {
     /**
@@ -15,6 +15,14 @@ class Apartment
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="expenses")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @var User
+     */
+    protected $user;
+
     /**
      * @ORM\Column(type="string", length=60, unique=true)
      */
@@ -43,7 +51,7 @@ class Apartment
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,14 +67,14 @@ class Apartment
     public function setNickname($nickname)
     {
         $this->nickname = $nickname;
-    
+
         return $this;
     }
 
     /**
      * Get nickname
      *
-     * @return string 
+     * @return string
      */
     public function getNickname()
     {
@@ -82,14 +90,14 @@ class Apartment
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
-    
+
         return $this;
     }
 
     /**
      * Get address1
      *
-     * @return string 
+     * @return string
      */
     public function getAddress1()
     {
@@ -105,14 +113,14 @@ class Apartment
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
-    
+
         return $this;
     }
 
     /**
      * Get address2
      *
-     * @return string 
+     * @return string
      */
     public function getAddress2()
     {
@@ -128,14 +136,14 @@ class Apartment
     public function setCity($city)
     {
         $this->city = $city;
-    
+
         return $this;
     }
 
     /**
      * Get city
      *
-     * @return string 
+     * @return string
      */
     public function getCity()
     {
@@ -151,14 +159,14 @@ class Apartment
     public function setState($state)
     {
         $this->state = $state;
-    
+
         return $this;
     }
 
     /**
      * Get state
      *
-     * @return string 
+     * @return string
      */
     public function getState()
     {
@@ -174,17 +182,37 @@ class Apartment
     public function setZip($zip)
     {
         $this->zip = $zip;
-    
+
         return $this;
     }
 
     /**
      * Get zip
      *
-     * @return string 
+     * @return string
      */
     public function getZip()
     {
         return $this->zip;
     }
+
+    /**
+     * @param \Dominick\RoommateBundle\Entity\User $user
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return \Dominick\RoommateBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
 }

@@ -13,10 +13,11 @@
 
             <form action="{{ path('account_login_check') }}" method="post">
                 <label for="username">User:</label>
-                <input class="form-control" id="username" type="text" name="_username" value="{{ last_username }}" />
+                <input class="form-control" id="username" type="text" name="_username" value="{{ last_username }}"/>
                 <label for="password">Password:</label>
-                <input class="form-control" id="password" type="password" name="_password" />
-                <p></p><input class="btn btn-primary" type="submit" name="login" /></p>
+                <input class="form-control" id="password" type="password" name="_password"/>
+
+                <p></p><input class="btn btn-primary" type="submit" name="login"/></p>
             </form>
         </div>
     </div>

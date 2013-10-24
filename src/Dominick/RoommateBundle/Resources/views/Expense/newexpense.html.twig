@@ -8,24 +8,26 @@
     <div class="row">
         <div class="col-md-4">
             <h3>Create a new expense</h3>
+
             <p>Desceription of this page</p>
             {{ form_start(form) }}
             {{ form_errors(form) }}
 
             {{ form_label(form.description, 'Expense Description') }}
             {{ form_errors(form.description) }}
-            {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.description, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.cost, 'Cost') }}
             {{ form_errors(form.cost) }}
-            {{ form_widget(form.cost, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.cost, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.type, 'Type') }}
             {{ form_errors(form.type) }}
-            {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.type, {'attr': {'class': 'form-control' }}) }}
 
             <br>
-            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary'}}) }}</p>
+
+            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary' }}) }}</p>
             {{ form_end(form) }}
         </div>
         <div class="col-md-8">

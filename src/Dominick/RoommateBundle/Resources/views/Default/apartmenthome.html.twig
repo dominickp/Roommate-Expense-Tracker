@@ -9,7 +9,11 @@
         <div class="col-md-12">
             <h3 id="{{ app.user.apartmentId }}">
 
-                {{ apartment.nickname }} <p><small>{{ apartment.address1 }}, {{ apartment.address2 }}, {{ apartment.city }}, {{ apartment.state }} {{ apartment.zip }}</small></p>
+                {{ apartment.nickname }}
+                <p>
+                    <small>{{ apartment.address1 }}, {{ apartment.address2 }}, {{ apartment.city }}
+                        , {{ apartment.state }} {{ apartment.zip }}</small>
+                </p>
             </h3>
         </div>
         <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>

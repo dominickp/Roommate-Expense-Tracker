@@ -3,81 +3,215 @@
 namespace Dominick\RoommateBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="Dominick\RoommateBundle\Entity\UserRepository")
  * @ORM\Table(name="user")
+ * @ORM\Entity(repositoryClass="Dominick\RoommateBundle\Repository\Users")
+ * @ORM\HasLifecycleCallbacks
+ * @UniqueEntity(fields="username", message="Username already taken")
  */
-class User implements UserInterface, \Serializable
+class User implements AdvancedUserInterface, \Serializable
 {
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @var integer
      */
     protected $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Apartment", inversedBy="users")
+     * @ORM\JoinColumn(name="apartment_id", referencedColumnName="id")
+     * @var User
+     */
+    protected $apartment;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="60")
      * @ORM\Column(type="string", length=60, unique=true)
+     * @var string
      */
     protected $username;
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="60")
      * @ORM\Column(type="string", length=60)
+     * @var string
      */
     protected $fullname;
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(min="8")
      * @ORM\Column(type="string", length=64)
-     */
-    protected $salt;
-
-    /**
-     * @ORM\Column(type="string", length=64)
+     * @var string
      */
     protected $password;
 
     /**
+     * @ORM\Column(type="string", length=64)
+     * @var string
+     */
+    protected $salt;
+
+    /**
      * @ORM\Column(name="is_active", type="boolean")
+     * @var boolean
      */
     protected $isActive;
 
     /**
      * @ORM\Column(type="integer", name="apartment_id", nullable=true)
+     * @var integer
      */
     protected $apartmentId;
 
     /**
      * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
-     *
+     * @var ArrayCollection
      */
     protected $roles;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Expense", mappedBy="user")
+     * @var ArrayCollection
+     */
+    protected $expenses;
+
+    /**
+     * @ORM\Column(name="created", type="datetime", nullable=false)
+     * @var \DateTime
+     */
+    protected $created;
+
+    /**
+     * @ORM\Column(name="updated", type="datetime", nullable=false)
+     * @var \DateTime
+     */
+    protected $updated;
 
     public function __construct()
     {
         $this->isActive = true;
         $this->salt = md5(uniqid(null, true));
-    //    $this->password = $this->plainPassword;
         $this->roles = new ArrayCollection();
-    //    $this->addRole('ROLE_USER');
 
-    //    $this->roles = new ArrayCollection(array('ROLE_USER'));
+        $this->roles = new ArrayCollection();
+        $this->expenses = new ArrayCollection();
+
+        $this->created = new \DateTime("now");
     }
-
-    public function getRoles()
-    {
-        return $this->roles->toArray();
-    }
-
 
     /**
-     * @inheritDoc
+     * @return \DateTime
      */
-    public function getSalt()
+    public function getCreated()
     {
-        return $this->salt;
+        return $this->created;
+    }
+
+    /**
+     * @param Expense $expense
+     * @return User
+     */
+    public function addExpense(Expense $expense)
+    {
+        $this->expenses->add($expense);
+
+        return $this;
+    }
+
+//    /**
+//     * @param \Doctrine\Common\Collections\ArrayCollection $expenses
+//     * @return User
+//     */
+//    public function setExpenses($expenses)
+//    {
+//        $this->expenses = $expenses;
+//        return $this;
+//    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getExpenses()
+    {
+        return $this->expenses;
+    }
+
+    /**
+     * @param string $fullname
+     * @return User
+     */
+    public function setFullname($fullname)
+    {
+        $this->fullname = $fullname;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFullname()
+    {
+        return $this->fullname;
+    }
+
+    /**
+     * @param integer $id
+     * @return User
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param boolean $isActive
+     * @return User
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param string $password
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
     }
 
     /**
@@ -88,12 +222,97 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
+    /**
+     * @param Role
+     * @return User
+     */
+    public function addRole(Role $role)
+    {
+        $this->roles->add($role);
+
+        return $this;
+    }
+
+//    /**
+//     * @param mixed $roles
+//     */
+//    public function setRoles($roles)
+//    {
+//        $this->roles = $roles;
+//    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRoles()
+    {
+        return $this->roles->toArray();
+    }
+
+    /**
+     * @param string $salt
+     * @return User
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     * @return User
+     */
+    public function setUpdated()
+    {
+        $this->updated = new \DateTime("now");
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @param string $username
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
 
     /**
      * @inheritDoc
      */
     public function eraseCredentials()
     {
+
     }
 
     /**
@@ -116,158 +335,59 @@ class User implements UserInterface, \Serializable
     {
         list (
             $this->id,
+            $this->username,
+            $this->password,
+            $this->salt,
             ) = unserialize($serialized);
     }
 
     /**
-     * Get id
-     *
-     * @return integer 
+     * @inheritDoc
      */
-    public function getId()
+    public function isAccountNonExpired()
     {
-        return $this->id;
-    }
-
-
-    /**
-     * Set salt
-     *
-     * @param string $salt
-     * @return User
-     */
-    public function setSalt($salt)
-    {
-        $this->salt = $salt;
-    
-        return $this;
+        return true;
     }
 
     /**
-     * Set password
-     *
-     * @param string $password
-     * @return User
+     * @inheritDoc
      */
-    public function setPassword($password)
+    public function isAccountNonLocked()
     {
-        $this->password = $password;
-    
-        return $this;
+        return true;
     }
 
     /**
-     * Set username
-     *
-     * @param string $username
-     * @return User
+     * @inheritDoc
      */
-    public function setUsername($username)
+    public function isCredentialsNonExpired()
     {
-        $this->username = $username;
-    
-        return $this;
+        return true;
     }
 
     /**
-     * Get username
-     *
-     * @return string 
+     * @inheritDoc
      */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * Set isActive
-     *
-     * @param boolean $isActive
-     * @return User
-     */
-    public function setIsActive($isActive)
-    {
-        $this->isActive = $isActive;
-    
-        return $this;
-    }
-
-    /**
-     * Get isActive
-     *
-     * @return boolean 
-     */
-    public function getIsActive()
+    public function isEnabled()
     {
         return $this->isActive;
     }
+    /**
+     * @param \Dominick\RoommateBundle\Entity\User $user
+     * @return $this
+     */
+    public function setApartment(Apartment $apartment)
+    {
+        $this->apartment = $apartment;
 
-    /**
-     * Add roles
-     *
-     * @param \Dominick\RoommateBundle\Entity\Role $roles
-     * @return User
-     */
-    public function addRole(\Dominick\RoommateBundle\Entity\Role $roles)
-    {
-        //$this->roles[] = $roles;
-        $this->roles->add($roles);
-    
-        return $this;
-    }
-    /**
-     * Remove roles
-     *
-     * @param \Dominick\RoommateBundle\Entity\Role $roles
-     */
-    public function removeRole(\Dominick\RoommateBundle\Entity\Role $roles)
-    {
-        $this->roles->removeElement($roles);
-    }
-
-    /**
-     * Set fullname
-     *
-     * @param string $fullname
-     * @return User
-     */
-    public function setFullname($fullname)
-    {
-        $this->fullname = $fullname;
-    
         return $this;
     }
 
     /**
-     * Get fullname
-     *
-     * @return string 
+     * @return \Dominick\RoommateBundle\Entity\User
      */
-    public function getFullname()
+    public function getApartment()
     {
-        return $this->fullname;
-    }
-
-    /**
-     * Set apartmentId
-     *
-     * @param integer $apartmentId
-     * @return User
-     */
-    public function setApartmentId($apartmentId)
-    {
-        $this->apartmentId = $apartmentId;
-    
-        return $this;
-    }
-
-    /**
-     * Get apartmentId
-     *
-     * @return integer 
-     */
-    public function getApartmentId()
-    {
-        return $this->apartmentId;
+        return $this->apartment;
     }
 }

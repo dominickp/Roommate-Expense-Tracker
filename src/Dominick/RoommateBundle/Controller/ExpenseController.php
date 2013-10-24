@@ -22,6 +22,7 @@ class ExpenseController extends Controller
     {
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
+
     public function newExpenseAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -31,9 +32,10 @@ class ExpenseController extends Controller
         // $task->setTask('Write a blog post');
 
         // Load up the user & apartment IDs so I can use it for the new expense
-        $currentUser = $this->get('security.context')->getToken()->getUser();
+        $securityContext = $this->get('security.context');
+        $currentUser = $securityContext->getUser();
         $currentUserId = $currentUser->getId();
-        $currentApartmentId = $currentUser->getApartmentId();
+        //$currentApartmentId = $currentUser->getApartmentId();
 
         $form = $this->createFormBuilder($exp)
             ->add('description', 'text')
@@ -49,19 +51,18 @@ class ExpenseController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isValid())
-        {
+        if ($form->isValid()) {
             $exp = $form->getData();
 
             // Set user/apartment IDs before submitting the new expense
-            $exp->setUserId($currentUserId);
-            $exp->setApartmentId($currentApartmentId);
+            $exp->setUser($currentUser);
+            //$exp->setApartmentId($currentApartmentId);
 
             // Set time because Doctrine sucks
             //$exp->setTimestamp($exp->setUpdated);
 
             // Generate a token value so this expense can be referenced later
-            $exp->setToken(substr(md5($exp->getDescription().time()), 0, 8));
+            $exp->setToken(substr(md5($exp->getDescription() . time()), 0, 8));
 
 
             $em->persist($exp);
@@ -74,29 +75,30 @@ class ExpenseController extends Controller
             'form' => $form->createView(),
         ));
     }
+
     public function browseExpenseAction(Request $request)
     {
         // Load up the user & apartment IDs so I can use it for limiting the browse results
-        $currentUser = $this->get('security.context')->getToken()->getUser();
-        $currentUserId = $currentUser->getId();
-        $currentApartmentId = $currentUser->getApartmentId();
+        $securityContext = $this->get('security.context');
+        $currentUser = $securityContext->getUser();
+        //$currentApartmentId = $currentUser->getApartmentId();
 
         $aptexpense = $this->getDoctrine()
             ->getRepository('DominickRoommateBundle:Expense')
             //->findAll();
             ->findBy(
-                array('userId' => $currentUserId),  // $where
-                array('timestamp' => 'ASC'),        // $orderBy
-                999,                                  // $limit
-                0                                   // $offset
+                array('user' => $currentUser), // $where
+                array('timestamp' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
             );
 
         // Tally some totals
         $totals = array(
-            'cost'       => 0,
-            'expenses'   => 0
+            'cost' => 0,
+            'expenses' => 0
         );
-        foreach($aptexpense as $exp){
+        foreach ($aptexpense as $exp) {
             $totals['cost'] += $exp->getCost();
             $totals['expenses']++;
         }
@@ -108,15 +110,15 @@ class ExpenseController extends Controller
         }
 
         // Get $users so I can pass it to the view
-        $users =  $this->getDoctrine()
-            ->getRepository('DominickRoommateBundle:User')
-            ->findAll();
+//        $users = $this->getDoctrine()
+//            ->getRepository('DominickRoommateBundle:User')
+//            ->findAll();
 
         //return var_dump($aptexpense);
         return $this->render('DominickRoommateBundle:Expense:browseexpense.html.twig', array(
-            'results' => $aptexpense,
+            'expenses' => $aptexpense,
             'totals' => $totals,
-            'users' => $users,
+            //'users' => $users,
         ));
     }
 }

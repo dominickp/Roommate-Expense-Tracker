@@ -1,11 +1,12 @@
 <?php
+
 namespace Dominick\RoommateBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
  * @ORM\Table(name="expense")
+ * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
 class Expense
@@ -14,36 +15,57 @@ class Expense
      * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @var integer
      */
     protected $id;
+
     /**
-     * @ORM\Column(type="integer", unique=false)
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="expenses")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @var User
      */
-    protected $userId;
+    protected $user;
+
     /**
      * @ORM\Column(type="integer", unique=false)
      */
     protected $apartmentId;
+
     /**
      * @ORM\Column(type="string", length=60, nullable=true)
+     * @var string
      */
     protected $description;
+
     /**
      * @ORM\Column(type="string", length=60, nullable=false)
+     * @var string
      */
     protected $token;
+
     /**
      * @ORM\Column(type="string", length=60, nullable=true)
+     * @var string
      */
     protected $type;
+
     /**
      * @ORM\Column(type="decimal", length=16, nullable=false)
+     * @var double
      */
     protected $cost;
+
     /**
      * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
-    protected $timestamp;
+    protected $created;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    protected $updated;
 
     public function __construct()
     {
@@ -51,156 +73,18 @@ class Expense
     }
 
     /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-    public function setUpdated()
-    {
-        $this->timestamp = new \DateTime("now");
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set userId
-     *
-     * @param integer $userId
-     * @return Expense
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-    
-        return $this;
-    }
-
-    /**
-     * Get userId
-     *
-     * @return integer 
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * Set apartmentId
-     *
-     * @param integer $apartmentId
-     * @return Expense
-     */
-    public function setApartmentId($apartmentId)
-    {
-        $this->apartmentId = $apartmentId;
-    
-        return $this;
-    }
-
-    /**
-     * Get apartmentId
-     *
-     * @return integer 
-     */
-    public function getApartmentId()
-    {
-        return $this->apartmentId;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     * @return Expense
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set token
-     *
-     * @param string $token
-     * @return Expense
-     */
-    public function setToken($token)
-    {
-        $this->token = $token;
-    
-        return $this;
-    }
-
-    /**
-     * Get token
-     *
-     * @return string 
-     */
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-    /**
-     * Set type
-     *
-     * @param string $type
-     * @return Expense
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string 
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * Set cost
-     *
      * @param float $cost
-     * @return Expense
+     * @return Expense $this
      */
     public function setCost($cost)
     {
         $this->cost = $cost;
-    
+        
         return $this;
     }
 
     /**
-     * Get cost
-     *
-     * @return float 
+     * @return float
      */
     public function getCost()
     {
@@ -208,25 +92,127 @@ class Expense
     }
 
     /**
-     * Set timestamp
-     *
-     * @param \DateTime $timestamp
-     * @return Expense
+     * @return \DateTime
      */
-    public function setTimestamp($timestamp)
+    public function getCreated()
     {
-        $this->timestamp = $timestamp;
+        return $this->created;
+    }
 
+    /**
+     * @param string $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        
         return $this;
     }
 
     /**
-     * Get timestamp
-     *
-     * @return \DateTime 
+     * @return string
      */
-    public function getTimestamp()
+    public function getDescription()
     {
-        return $this->timestamp;
+        return $this->description;
     }
+
+    /**
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $token
+     * @return $this
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+        
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     * @return $this
+     */
+    public function setUpdated()
+    {
+        $this->updated = new \DateTime("now");
+        
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @param \Dominick\RoommateBundle\Entity\User $user
+     * @return $this
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+        
+        return $this;
+    }
+
+    /**
+     * @return \Dominick\RoommateBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+
 }

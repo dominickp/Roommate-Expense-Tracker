@@ -21,9 +21,13 @@ class UserController extends Controller
     {
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
-    public function registerAction(Request $request)
+
+    public function registerAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $request = $this->getRequest();
+        $session = $request->getSession();
+        $session->start();
+
         $user = new User();
 
         // This is how you auto fill form data
@@ -33,9 +37,9 @@ class UserController extends Controller
             ->add('username', 'email')
             ->add('fullname', 'text')
             ->add('password', 'repeated', array(
-                'first_name'  => 'password',
+                'first_name' => 'password',
                 'second_name' => 'confirm',
-                'type'        => 'password',
+                'type' => 'password',
             ))
             ->add('Register', 'submit')
             ->getForm();
@@ -46,20 +50,28 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         // If the form is valid, we should be submitting the data, right?
-        if ($form->isValid()) {
+        if ($form->isValid())
+        {
+
             $user = $form->getData();
-            // Forget about that unencrypted password the silly person gave you
-            unset($user->plainPassword);
+
             // Grab the security settings for this class from security.yml
             $factory = $this->get('security.encoder_factory');
             // Get the encoder
             $encoder = $factory->getEncoder($user);
+
             // Encrypt, then set the password. Salt is generated in the User entity.
-            $user->setPassword($encoder->encodePassword($user->getPassword(), $user->getSalt()));
+            $user->setPassword(
+                $encoder->encodePassword($user->getPassword(), $user->getSalt())
+            );
+
             // Set the default role for this type of registration
             $default_role = $this->getDoctrine()->getRepository('DominickRoommateBundle:Role')->findOneBy(array('role' => 'ROLE_USER'));
             // Call the addRole method with the role I've selected
-            $user->addRole($default_role);
+            $this->addRole($default_role);
+
+            // Get the entity manager
+            $em = $this->getDoctrine()->getManager();
             // Save the new row you created when you initialized User
             $em->persist($user);
             // Fire!
@@ -73,6 +85,7 @@ class UserController extends Controller
             'form' => $form->createView(),
         ));
     }
+
     public function loginAction(Request $request)
     {
         $request = $this->getRequest();
@@ -88,7 +101,7 @@ class UserController extends Controller
         return $this->render('DominickRoommateBundle:User:login.html.twig', array(
             // last username entered by the user
             'last_username' => $session->get(SecurityContext::LAST_USERNAME),
-            'error'         => $error,
+            'error' => $error,
         ));
     }
 }

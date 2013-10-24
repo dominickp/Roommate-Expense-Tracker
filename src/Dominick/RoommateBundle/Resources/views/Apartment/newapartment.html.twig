@@ -8,41 +8,45 @@
     <div class="row">
         <div class="col-md-4">
             <h3>Create a new apartment</h3>
+
             <p>You'll have to add your apartment in before we can start tracking expenses.</p>
             {{ form_start(form) }}
             {{ form_errors(form) }}
 
             {{ form_label(form.nickname, 'Apartment Nick Name') }}
             {{ form_errors(form.nickname) }}
-            {{ form_widget(form.nickname, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.nickname, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.address1, 'Address 1') }}
             {{ form_errors(form.address1) }}
-            {{ form_widget(form.address1, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.address1, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.address2, 'Address 2') }}
             {{ form_errors(form.address2) }}
-            {{ form_widget(form.address2, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.address2, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.city, 'City') }}
             {{ form_errors(form.city) }}
-            {{ form_widget(form.city, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.city, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.state, 'State') }}
             {{ form_errors(form.state) }}
-            {{ form_widget(form.state, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.state, {'attr': {'class': 'form-control' }}) }}
 
             {{ form_label(form.zip, 'Postal Code') }}
             {{ form_errors(form.zip) }}
-            {{ form_widget(form.zip, {'attr': {'class': 'form-control'}}) }}
+            {{ form_widget(form.zip, {'attr': {'class': 'form-control' }}) }}
 
             <br>
-            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary'}}) }}</p>
+
+            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary' }}) }}</p>
             {{ form_end(form) }}
         </div>
         <div class="col-md-8">
             <h3>Lookup an existing apartment</h3>
+
             <p>If one of your roommates already registered your apartment, you can search for it below.</p>
+
             <p><a class="btn btn-primary" href="{{ path('apartment_lookup') }}">Lookup Apartments</a></p>
         </div>
     </div>
