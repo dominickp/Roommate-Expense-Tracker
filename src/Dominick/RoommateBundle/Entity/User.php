@@ -27,7 +27,7 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * @ORM\ManyToOne(targetEntity="Apartment", inversedBy="users")
      * @ORM\JoinColumn(name="apartment_id", referencedColumnName="id")
-     * @var User
+     * @var Apartment
      */
     protected $apartment;
 

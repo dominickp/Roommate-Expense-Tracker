@@ -19,14 +19,16 @@ class DefaultController extends Controller
             // The same as saying
             // $user = $this->get('security.context')->getToken()->getUser();
             $user = $this->getUser();
-            $apartmentId = $user->getApartmentId();
+            $apartment = $user->getApartment();
             // Send to create apartment if not assigned
-            if (empty($apartmentId)) {
+            if (empty($apartment)) {
                 return $this->redirect($this->generateUrl('apartment_register'));
                 // Send to index if they already have an apartment
             } else {
 
-                return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+                return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome', array(
+                //    'apartment' => $apartment,
+                )));
             }
 
         } else {
@@ -39,10 +41,7 @@ class DefaultController extends Controller
     {
         // Get apartment info
         $user = $this->getUser();
-        $apartmentId = $user->getApartmentId();
-        $apartment = $this->getDoctrine()
-            ->getRepository('DominickRoommateBundle:Apartment')
-            ->find($apartmentId);
+        $apartment = $user->getApartment();
 
         return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array(
             'apartment' => $apartment,

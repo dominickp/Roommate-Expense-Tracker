@@ -2,6 +2,7 @@
 namespace Dominick\RoommateBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -17,11 +18,10 @@ class Apartment
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="expenses")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
-     * @var User
+     * @ORM\OneToMany(targetEntity="User", mappedBy="apartment")
+     * @var ArrayCollection
      */
-    protected $user;
+    protected $users;
 
     /**
      * @ORM\Column(type="string", length=60, unique=true)

@@ -45,6 +45,10 @@ class ApartmentController extends Controller
 
         if ($form->isValid()) {
             $apt = $form->getData();
+
+            $user = $this->getUser();
+            $user->setApartment($apt);
+
             $em->persist($apt);
             $em->flush();
             // Attempt to get the ID
@@ -63,7 +67,7 @@ class ApartmentController extends Controller
                 $em->persist($user);
                 $em->flush();
             */
-            $this->setApartmentIdAction($aptId);
+            //$this->setApartmentIdAction($aptId);
 
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
@@ -94,18 +98,13 @@ class ApartmentController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        // Load up the user ID so I can inject the apartment ID into the user's row
-        $currentUser = $this->get('security.context')->getToken()->getUser();
-        $currentUserId = $currentUser->getId();
-        // Use the entity manager to get my User entity and find the user of the ID I have
-        $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
-
-        //$user = new User();
-        $user->setApartmentId($id);
+        $apartment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Apartment')->find($id);
+        $user = $this->getUser();
+        $user->setApartment($apartment);
 
         $em->persist($user);
         $em->flush();
 
-        return $this->redirect($this->generateUrl('dominick_roommate_loggedin'));
+        return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
     }
 }

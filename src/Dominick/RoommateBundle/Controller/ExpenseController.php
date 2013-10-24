@@ -23,7 +23,7 @@ class ExpenseController extends Controller
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
 
-    public function newExpenseAction(Request $request)
+    public function newExpenseAction()
     {
         $em = $this->getDoctrine()->getManager();
         $exp = new Expense();
@@ -76,11 +76,12 @@ class ExpenseController extends Controller
         ));
     }
 
-    public function browseExpenseAction(Request $request)
+    public function browseExpenseAction()
     {
         // Load up the user & apartment IDs so I can use it for limiting the browse results
-        $securityContext = $this->get('security.context');
-        $currentUser = $securityContext->getUser();
+        //$securityContext = $this->get('security.context');
+        $securityContext = $this->container->get('security.context');
+        $currentUser = $this->getUser();
         //$currentApartmentId = $currentUser->getApartmentId();
 
         $aptexpense = $this->getDoctrine()
@@ -88,7 +89,7 @@ class ExpenseController extends Controller
             //->findAll();
             ->findBy(
                 array('user' => $currentUser), // $where
-                array('timestamp' => 'ASC'), // $orderBy
+                array('created' => 'ASC'), // $orderBy
                 999, // $limit
                 0 // $offset
             );
