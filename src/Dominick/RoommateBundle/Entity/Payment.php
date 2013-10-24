@@ -5,11 +5,16 @@ namespace Dominick\RoommateBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Payment
+ * @ORM\Table(name="payment")
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Payment
 {
     /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @var integer
      */
     private $id;
@@ -22,19 +27,27 @@ class Payment
     protected $user;
 
     /**
-     * @var integer
+     * @ORM\Column(type="integer", unique=false)
      */
     private $apartmentId;
 
     /**
+     * @ORM\Column(type="string", length=60, nullable=true)
      * @var string
      */
     private $method;
 
     /**
-     * @var float
+     * @ORM\Column(type="decimal", length=16, nullable=false)
+     * @var double
      */
     private $amount;
+
+    /**
+     * @ORM\Column(type="string", length=200, nullable=true)
+     * @var string
+     */
+    protected $memo;
 
     /**
      * @ORM\Column(type="datetime")
