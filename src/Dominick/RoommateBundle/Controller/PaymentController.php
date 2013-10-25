@@ -56,31 +56,32 @@ class PaymentController extends Controller
             ->add('recipient', 'entity', array(
                 'class' => 'DominickRoommateBundle:User',
                 'choices' => $currentRoommates,
-                'query_builder' => function(EntityRepository $er) {
+                /*'query_builder' => function(EntityRepository $er) {
                     return $er->createQueryBuilder('u')
                         ->orderBy('u.username', 'ASC');
-                },
+                },*/
             ))
             ->add('Save', 'submit')
             ->getForm();
 
         $form->handleRequest($request);
+        if($this->getRequest()->getMethod() == 'POST') {
+            if ($form->isValid()) {
+                $pay = $form->getData();
+    
+                // Set user
+                $pay->setUser($currentUser);
 
-        if ($form->isValid()) {
-            $pay = $form->getData();
+                // Set the apartmentId
+                $pay->setApartmentId($currentApartment->getId());
+    //var_dump($form);
+                //var_dump($pay);
+                $em->persist($pay);
+                $em->flush();
 
-            // Set user
-            $pay->setUser($currentUser);
-
-            // Set the apartmentId
-            $pay->setApartmentId($currentApartment->getId());
-var_dump($form);
-            var_dump($pay);
-            $em->persist($pay);
-            $em->flush();
-
-            // Send to the apartment overview page, now that the apartment has been created an tied to them.
-            //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+                // Send to the apartment overview page, now that the apartment has been created an tied to them.
+                //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+            } else { print_r($form->getErrors()); }
         }
 
         // Generate array to send to the view
