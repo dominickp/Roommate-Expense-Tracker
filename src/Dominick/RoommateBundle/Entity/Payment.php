@@ -20,14 +20,14 @@ class Payment
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="payments")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="paymentsMade")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * @var User
      */
     protected $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="payments")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="paymentsReceived")
      * @ORM\JoinColumn(name="recipient_id", referencedColumnName="id")
      * @var User
      */

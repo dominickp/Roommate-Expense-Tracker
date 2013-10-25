@@ -86,6 +86,18 @@ class User implements AdvancedUserInterface, \Serializable
     protected $expenses;
 
     /**
+     * @ORM\OneToMany(targetEntity="Payment", mappedBy="user")
+     * @var ArrayCollection
+     */
+    protected $paymentsMade;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Payment", mappedBy="recipient")
+     * @var ArrayCollection
+     */
+    protected $paymentsReceived;
+
+    /**
      * @ORM\Column(name="created", type="datetime", nullable=false)
      * @var \DateTime
      */

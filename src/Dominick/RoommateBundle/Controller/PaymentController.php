@@ -55,6 +55,7 @@ class PaymentController extends Controller
             ))
             ->add('recipient', 'entity', array(
                 'class' => 'DominickRoommateBundle:User',
+                'choices' => $currentRoommates,
                 'query_builder' => function(EntityRepository $er) {
                     return $er->createQueryBuilder('u')
                         ->orderBy('u.username', 'ASC');
@@ -73,13 +74,12 @@ class PaymentController extends Controller
 
             // Set the apartmentId
             $pay->setApartmentId($currentApartment->getId());
-
-
+var_dump($form);
             $em->persist($pay);
             $em->flush();
 
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
-            return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+            //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
 
         // Generate array to send to the view
