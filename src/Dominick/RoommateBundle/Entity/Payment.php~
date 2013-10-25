@@ -264,40 +264,4 @@ class Payment
     {
         return $this->updated;
     }
-
-    /**
-     * Set memo
-     *
-     * @param string $memo
-     * @return Payment
-     */
-    public function setMemo($memo)
-    {
-        $this->memo = $memo;
-    
-        return $this;
-    }
-
-    /**
-     * Get memo
-     *
-     * @return string 
-     */
-    public function getMemo()
-    {
-        return $this->memo;
-    }
-
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     * @return Payment
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-    
-        return $this;
-    }
 }

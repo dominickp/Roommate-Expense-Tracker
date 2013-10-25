@@ -48,6 +48,12 @@ $collection->add('expense_browse', new Route('/expense/browse/', array(
     '_controller' => 'DominickRoommateBundle:Expense:browseExpense',
 )));
 
+# PAYMENTS
+# EXPENSES
+$collection->add('payment_new', new Route('/payment/new/', array(
+    '_controller' => 'DominickRoommateBundle:Payment:newPayment',
+)));
+
 /* I don't think I need this anymore
 $collection->add('account_create', new Route('/register/create', array(
     '_controller' => 'DominickRoommateBundle:User:create',

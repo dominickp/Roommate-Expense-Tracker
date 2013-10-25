@@ -1,0 +1,38 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Make A Payment" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Make a Payment</h3>
+
+            <p>Description of this page</p>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_label(form.memo, 'Payment Memo') }}
+            {{ form_errors(form.memo) }}
+            {{ form_widget(form.memo, {'attr': {'class': 'form-control' }}) }}
+
+            {{ form_label(form.amount, 'Amount') }}
+            {{ form_errors(form.amount) }}
+            {{ form_widget(form.amount, {'attr': {'class': 'form-control' }}) }}
+
+            {{ form_label(form.method, 'Payment Method') }}
+            {{ form_errors(form.method) }}
+            {{ form_widget(form.method, {'attr': {'class': 'form-control' }}) }}
+
+            <br>
+
+            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary' }}) }}</p>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-8">
+
+        </div>
+    </div>
+{% endblock %}
+
