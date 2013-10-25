@@ -19,3 +19,12 @@ $container->setDefinition(
 );
 
 */
+
+$container->setParameter(
+    'dominick.controller.expense.class',
+    'Dominick\RoommateBundle\Controller\ExpenseController'
+);
+
+$container->setDefinition('dominick.expense.controller', new Definition(
+    '%dominick.controller.expense.class%'
+));

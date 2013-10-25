@@ -2,6 +2,9 @@
 
 namespace Dominick\RoommateBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Dominick\RoommateBundle\Entity\Expense;
+use Dominick\RoommateBundle\Entity\User;
+use Dominick\RoommateBundle\Entity\Apartment;
 
 class DefaultController extends Controller
 {
@@ -54,9 +57,86 @@ class DefaultController extends Controller
                 0 // $offset
             );
 
+        $currentUser = $this->getUser();
+        $currentApartmentId = $currentUser->getApartment()->getId();
+
+        // Tally some totals which I'll use later
+        $totals = array(
+            'cost' => 0,
+            'expenses' => 0,
+            'roommates' => 0,
+            'roommateCost' => 0,
+            'myPaymentTotal' => 0,
+            'myExpenseTotal' => 0,
+        );
+
+        // Pull all of the expenses tied to this apartment
+        $aptExpense = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Expense')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
+
+        // Pull all of the payments tied to this apartment
+        $aptPayments = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Payment')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
+
+        // Pull User to use for converting IDs to names in the view
+        $users = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:User')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
+
+        // To calculate stuff like the cost per roommate, I'll need to tally the number of roommates
+        $totals['roommates'] = count($users);
+
+        // Iterate through the expenses to tally totals and set cost per roommate
+        foreach ($aptExpense as &$exp) {
+            $totals['cost'] += $exp->getCost();
+            $totals['expenses']++;
+            $exp->perRoommateCost = $exp->getCost()/$totals['roommates'];
+            $totals['roommateCost'] += $exp->perRoommateCost;
+            // Get the total the current user has registered for paid expenses
+            if($exp->getUser()->getId() == $user->getId()){
+                $totals['myExpenseTotal'] += $exp->getCost();
+            }
+        }
+
+        foreach ($aptPayments as $pay) {
+            //$exp->perRoommateCost = $exp->getCost()/$totals['roommates'];
+            //$totals['roommateCost'] += $exp->perRoommateCost;
+
+            // Get the total the current user has paid out
+            if($pay->getUser()->getId() == $user->getId()){
+                $totals['myPaymentTotal'] += $pay->getAmount();
+            }
+        }
+
+        // Calculate a few more things using some basic math
+        $totals['myTotalPaid'] = $totals['myPaymentTotal']+$totals['myExpenseTotal'];
+        $totals['myBalance'] = $totals['myTotalPaid']-$totals['roommateCost'];
+
+var_dump($totals);
         return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array(
             'apartment' => $apartment,
             'roommates' => $roommates,
+            'totals'    => $totals,
         ));
         //return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array());
     }

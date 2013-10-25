@@ -75,6 +75,7 @@ class PaymentController extends Controller
             // Set the apartmentId
             $pay->setApartmentId($currentApartment->getId());
 var_dump($form);
+            var_dump($pay);
             $em->persist($pay);
             $em->flush();
 
