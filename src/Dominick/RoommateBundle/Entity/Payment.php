@@ -34,6 +34,12 @@ class Payment
     protected $recipient;
 
     /**
+     * @ORM\Column(type="integer", name="recipient_id", nullable=true)
+     * @var integer
+     */
+    protected $recipientId;
+
+    /**
      * @ORM\Column(type="integer", unique=false)
      */
     private $apartmentId;
@@ -224,7 +230,7 @@ class Payment
      */
     public function setRecipient(User $recipient)
     {
-        $this->user = $recipient;
+        $this->recipient = $recipient;
 
         return $this;
     }
@@ -299,5 +305,28 @@ class Payment
         $this->created = $created;
     
         return $this;
+    }
+
+    /**
+     * Set recipientId
+     *
+     * @param integer $recipientId
+     * @return Payment
+     */
+    public function setRecipientId($recipientId)
+    {
+        $this->recipientId = $recipientId;
+    
+        return $this;
+    }
+
+    /**
+     * Get recipientId
+     *
+     * @return integer 
+     */
+    public function getRecipientId()
+    {
+        return $this->recipientId;
     }
 }

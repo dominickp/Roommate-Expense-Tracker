@@ -20,18 +20,24 @@ class Payment
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="payments")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="paymentsMade")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * @var User
      */
     protected $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="payments")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="paymentsReceived")
      * @ORM\JoinColumn(name="recipient_id", referencedColumnName="id")
      * @var User
      */
     protected $recipient;
+
+    /**
+     * @ORM\Column(type="integer", name="recipient_id", nullable=true)
+     * @var integer
+     */
+    protected $recipientId;
 
     /**
      * @ORM\Column(type="integer", unique=false)
@@ -263,5 +269,41 @@ class Payment
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    /**
+     * Set memo
+     *
+     * @param string $memo
+     * @return Payment
+     */
+    public function setMemo($memo)
+    {
+        $this->memo = $memo;
+    
+        return $this;
+    }
+
+    /**
+     * Get memo
+     *
+     * @return string 
+     */
+    public function getMemo()
+    {
+        return $this->memo;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Payment
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    
+        return $this;
     }
 }

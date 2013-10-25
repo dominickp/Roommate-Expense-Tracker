@@ -45,6 +45,7 @@ class PaymentController extends Controller
 
         $form = $this->createFormBuilder($pay)
             ->add('memo', 'text')
+           // ->add('recipientId', 'number')
             //->add('recipient_id', 'text')
             ->add('method', 'choice', array(
                 'choices' => array('cash' => 'Cash', 'check' => 'Check', 'bank_transfer' => 'Bank Transfer'),
@@ -53,6 +54,7 @@ class PaymentController extends Controller
             ->add('amount', 'money', array(
                 'currency' => 'USD',
             ))
+
             ->add('recipient', 'entity', array(
                 'class' => 'DominickRoommateBundle:User',
                 'choices' => $currentRoommates,
@@ -75,7 +77,8 @@ class PaymentController extends Controller
                 // Set the apartmentId
                 $pay->setApartmentId($currentApartment->getId());
     //var_dump($form);
-                //var_dump($pay);
+    var_dump($_POST);
+               // var_dump($pay);
                 $em->persist($pay);
                 $em->flush();
 
