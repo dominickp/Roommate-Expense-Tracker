@@ -131,8 +131,15 @@ class DefaultController extends Controller
         // Calculate a few more things using some basic math
         $totals['myTotalPaid'] = $totals['myPaymentTotal']+$totals['myExpenseTotal'];
         $totals['myBalance'] = $totals['myTotalPaid']-$totals['roommateCost'];
+        if($totals['myBalance'] < 0){
+            $totals['balanceNegative'] = true;
+        } else {
+            $totals['balanceNegative'] = false;
+        }
 
-var_dump($totals);
+        //  debugging
+        //  var_dump($totals);
+
         return $this->render('DominickRoommateBundle:Default:apartmenthome.html.twig', array(
             'apartment' => $apartment,
             'roommates' => $roommates,

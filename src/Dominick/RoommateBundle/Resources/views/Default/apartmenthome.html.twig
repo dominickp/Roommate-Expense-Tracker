@@ -21,7 +21,11 @@
             <div class="row">
                 <div class="col-sm-4 text-center">
                     <strong>Your Balance</strong>
-                    <p><span class="lead">${{ totals.myBalance|number_format(2, '.', ',') }}</span></p>
+                    <p>
+                        <span class="balance {% if totals.balanceNegative == true %}negative{% endif %}">
+                            ${% if totals.balanceNegative != true %}+{% endif %}{{ totals.myBalance|number_format(2, '.', ',') }}
+                        </span>
+                    </p>
                 </div>
                 <div class="col-sm-4 text-center">
                     <strong>Your Expenses</strong>

@@ -1,0 +1,10 @@
+.balance{
+    font-size:36px;
+    color: #759e1a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 400;
+    -webkit-text-stroke: 0.3px;
+}
+.balance.negative{
+    color:#dd6666;
+}
