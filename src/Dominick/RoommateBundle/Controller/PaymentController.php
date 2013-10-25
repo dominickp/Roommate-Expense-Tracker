@@ -3,6 +3,7 @@
 namespace Dominick\RoommateBundle\Controller;
 
 // Stuff for DB insert
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Dominick\RoommateBundle\Entity\User;
 use Dominick\RoommateBundle\Entity\Apartment;
@@ -32,6 +33,16 @@ class PaymentController extends Controller
         $currentUser = $this->getUser();
         $currentApartment = $currentUser->getApartment();
 
+        $currentRoommates = $currentApartment->getUsers();
+        // Make an array of roommates (bros) which I can send to the form
+        $bros = array();
+        foreach($currentRoommates as $bro){
+            // Add all roommates except for yourself
+            if($currentUser->getId() !== $bro->getId()){
+                $bros[ $bro->getId() ] = $bro->getFullname();
+            }
+        }
+
         $form = $this->createFormBuilder($pay)
             ->add('memo', 'text')
             //->add('recipient_id', 'text')
@@ -41,6 +52,13 @@ class PaymentController extends Controller
             ))
             ->add('amount', 'money', array(
                 'currency' => 'USD',
+            ))
+            ->add('recipient', 'entity', array(
+                'class' => 'DominickRoommateBundle:User',
+                'query_builder' => function(EntityRepository $er) {
+                    return $er->createQueryBuilder('u')
+                        ->orderBy('u.username', 'ASC');
+                },
             ))
             ->add('Save', 'submit')
             ->getForm();
@@ -63,9 +81,20 @@ class PaymentController extends Controller
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
-        return $this->render('DominickRoommateBundle:Payment:newpayment.html.twig', array(
-            'form' => $form->createView(),
-        ));
+
+        // Generate array to send to the view
+        if(!empty($bros)){
+            $return = array(
+                'form' => $form->createView(),
+                'bros' => $bros,
+            );
+        } else {
+            $return = array(
+                'form' => $form->createView(),
+            );
+        }
+
+        return $this->render('DominickRoommateBundle:Payment:newpayment.html.twig', $return);
     }
 }
 ?>

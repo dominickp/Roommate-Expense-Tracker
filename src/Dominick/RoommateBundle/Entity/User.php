@@ -109,6 +109,11 @@ class User implements AdvancedUserInterface, \Serializable
         $this->created = new \DateTime("now");
     }
 
+    public function __toString()
+    {
+        return $this->fullname;
+    }
+
     /**
      * @return \DateTime
      */

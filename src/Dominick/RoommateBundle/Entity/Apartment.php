@@ -215,4 +215,13 @@ class Apartment
         return $this->user;
     }
 
+    /**
+     * @return array
+     */
+    public function getUsers()
+    {
+        return $this->users->toArray();
+    }
+
+
 }
