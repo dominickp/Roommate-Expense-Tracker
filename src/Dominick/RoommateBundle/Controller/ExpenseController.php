@@ -74,6 +74,10 @@ var_dump($form);
         ));
     }
 
+    public function testAction()
+    {
+        return 'test';
+    }
     public function browseExpenseAction()
     {
         // Load up the user & apartment IDs so I can use it for limiting the browse results

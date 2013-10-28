@@ -45,6 +45,11 @@ class PaymentController extends Controller
             }
         }
 
+        $default = new DefaultController;
+        print_r($default->getTotals($currentUser));
+       //var_dump($this->forward('dominick.controller.expense.class:testAction'));
+
+
         $form = $this->createFormBuilder($pay)
             ->add('memo', 'text')
             ->add('method', 'choice', array(

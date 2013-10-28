@@ -28,3 +28,4 @@ $container->setParameter(
 $container->setDefinition('dominick.expense.controller', new Definition(
     '%dominick.controller.expense.class%'
 ));
+
