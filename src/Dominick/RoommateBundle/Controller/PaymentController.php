@@ -77,13 +77,13 @@ class PaymentController extends Controller
                 // Set the apartmentId
                 $pay->setApartmentId($currentApartment->getId());
     //var_dump($form);
-    var_dump($_POST);
+    //var_dump($_POST);
                // var_dump($pay);
                 $em->persist($pay);
                 $em->flush();
 
                 // Send to the apartment overview page, now that the apartment has been created an tied to them.
-                //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+                return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
             } else { print_r($form->getErrors()); }
         }
 
