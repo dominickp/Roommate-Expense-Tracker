@@ -9,7 +9,7 @@
         <div class="col-md-4">
             <h3>Make a Payment</h3>
         {% if bros is defined %}
-            <p>Description of this page</p>
+            <p>You can use this page to register a payment you made to one of your roommates. This way, you can keep the balances up to date with what people owe.</p>
             {{ form_start(form) }}
             {{ form_errors(form) }}
 
@@ -41,6 +41,24 @@
         {% endif %}
         </div>
         <div class="col-md-8">
+            <h3>How to Make a Proper Payment</h3>
+            <p>Your goal is to get yours and your roommate's balances to $0 (this means nobody owes anybody anything). You can do this by dividing the amount that you owe and distributing into payments based on what your roommates are owed. See below to see what your roommates need to get to $0. </p>
+            <p>
+                {% if totals.balanceNegative == true %}You owe money to other roommates and should make a payment of {% else %} You are owed money. Prompt your other roommates to pay you {% endif %}
+                <span class="balance small {% if totals.balanceNegative == true %}negative{% endif %}">
+                    ${% if totals.balanceNegative != true %}+{% endif %}{{ totals.myBalance|number_format(2, '.', ',') }}
+                </span>
+            </p>
+            <ul>
+                {% for roommate in totals.roommate_data %}
+                    <li>{% if roommate.balanceNegative == true %}{{ roommate.fullName }} owes{% else %}<strong>{{ roommate.fullName }} is owed</strong>{% endif %}
+                    <span class="balance small {% if roommate.balanceNegative == true %}negative{% endif %}">
+                    ${% if roommate.balanceNegative != true %}+{% endif %}{{ roommate.balance|number_format(2, '.', ',') }}
+                    </span></li>
+                {% endfor %}
+            </ul>
+
+
 
         </div>
     </div>

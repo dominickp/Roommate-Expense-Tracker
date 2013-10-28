@@ -8,3 +8,7 @@
 .balance.negative{
     color:#dd6666;
 }
+.balance.small{
+    font-size:22px;
+    line-height: 18px;
+}
