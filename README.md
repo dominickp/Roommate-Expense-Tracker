@@ -7,3 +7,4 @@ Todo
 - Fix register with short password, lack of error
 - Split navigation into Expenses, Payments
 - Make home page have better stats
+- Setup non-dev routing
