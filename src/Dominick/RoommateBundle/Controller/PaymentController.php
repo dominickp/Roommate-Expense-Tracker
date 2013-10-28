@@ -24,6 +24,7 @@ class PaymentController extends Controller
     {
         return $this->render('DominickRoommateBundle:Default:index.html.twig', array());
     }
+
     public function getTotals()
     {
 
@@ -54,6 +55,7 @@ class PaymentController extends Controller
             'roommateCost' => 0,
             'myPaymentTotal' => 0,
             'myExpenseTotal' => 0,
+            'myReceivedTotal' => 0,
         );
 
         // Pull all of the expenses tied to this apartment
@@ -110,6 +112,10 @@ class PaymentController extends Controller
             if($pay->getUser()->getId() == $currentUser->getId()){
                 $totals['myPaymentTotal'] += $pay->getAmount();
             }
+            // Get the total the current user has received
+            if($pay->getRecipient()->getId() == $currentUser->getId()){
+                $totals['myReceivedTotal'] += $pay->getAmount();
+            }
         }
 
         // Build out Roommate Data
@@ -132,7 +138,7 @@ class PaymentController extends Controller
                 if($rpay->getUser()->getId() == $roommate->getId()){
                     $totals['roommate_data'][$roommate->getId()]['totalPayments'] += $rpay->getAmount();
                 }
-                 // Get the total the current user has received
+                // Get the total the current user has received
                 if($rpay->getRecipient()->getId() == $roommate->getId()){
                     $totals['roommate_data'][$roommate->getId()]['totalReceived'] += $rpay->getAmount();
                 }
@@ -161,17 +167,13 @@ class PaymentController extends Controller
 
         // Calculate a few more things using some basic math
         $totals['myTotalPaid'] = $totals['myPaymentTotal']+$totals['myExpenseTotal'];
-        $totals['myBalance'] = $totals['myTotalPaid']-$totals['roommateCost'];
+        $totals['myBalance'] = $totals['myTotalPaid']-$totals['myReceivedTotal']-$totals['roommateCost'];
         if($totals['myBalance'] < 0){
             $totals['balanceNegative'] = true;
         } else {
             $totals['balanceNegative'] = false;
         }
-
-        var_dump($totals);
-
         return $totals;
-
     }
     public function newPaymentAction(Request $request)
     {
