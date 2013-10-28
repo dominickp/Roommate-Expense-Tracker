@@ -36,17 +36,17 @@ class PaymentController extends Controller
         $currentRoommates = $currentApartment->getUsers();
         // Make an array of roommates (bros) which I can send to the form
         $bros = array();
-        foreach($currentRoommates as $bro){
-            // Add all roommates except for yourself
-            if($currentUser->getId() !== $bro->getId()){
-                $bros[ $bro->getId() ] = $bro->getFullname();
+        foreach($currentRoommates as $key => $bro){
+            // Remove yourself from the $currentRoommates variable
+            if($currentUser->getId() == $bro->getId()){
+                unset($currentRoommates[$key]);
+            } else {
+                $bros[$key] = 'Set';
             }
         }
 
         $form = $this->createFormBuilder($pay)
             ->add('memo', 'text')
-           // ->add('recipientId', 'number')
-            //->add('recipient_id', 'text')
             ->add('method', 'choice', array(
                 'choices' => array('cash' => 'Cash', 'check' => 'Check', 'bank_transfer' => 'Bank Transfer'),
                 'preferred_choices' => array('check'),
@@ -58,10 +58,11 @@ class PaymentController extends Controller
             ->add('recipient', 'entity', array(
                 'class' => 'DominickRoommateBundle:User',
                 'choices' => $currentRoommates,
-                /*'query_builder' => function(EntityRepository $er) {
+            /*    'query_builder' => function(EntityRepository $er) {
                     return $er->createQueryBuilder('u')
                         ->orderBy('u.username', 'ASC');
-                },*/
+                },
+            */
             ))
             ->add('Save', 'submit')
             ->getForm();
@@ -76,9 +77,7 @@ class PaymentController extends Controller
 
                 // Set the apartmentId
                 $pay->setApartmentId($currentApartment->getId());
-    //var_dump($form);
-    //var_dump($_POST);
-               // var_dump($pay);
+
                 $em->persist($pay);
                 $em->flush();
 
