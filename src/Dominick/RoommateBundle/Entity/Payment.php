@@ -51,7 +51,7 @@ class Payment
     private $method;
 
     /**
-     * @ORM\Column(type="decimal", length=16, nullable=false)
+     * @ORM\Column(type="decimal", scale=2, length=16, nullable=false)
      * @var double
      */
     private $amount;
