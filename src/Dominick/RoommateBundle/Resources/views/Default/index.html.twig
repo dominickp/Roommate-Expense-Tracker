@@ -7,11 +7,23 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12">
-            Welcome to the Roommate Expense Tracker. The goal of this application is to satisfy the requirements for <a
-                    href="http://dwa15.com/Projects/P2" target="_blank">Project 2</a> in a fun way that is also useful.
-            Using this application, you will be able to register an apartment, add roommates, view your monthly
-            expenses, add new one time or recurring expenses, mark them as paid, and see a tally of how much you owe
-            each of your roommates.
+            <h3>Welcome to the Roommate Expense Tracker</h3>
+            <p>This web application was made to make it easy to keep track of shared expenses with your roommates. Using this application, you will be able to register an apartment, add roommates, view your monthly expenses, add new one time or recurring expenses, log new payments made to other roommates, and see a tally of how much you owe each of your roommates and how much they owe.</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Log your expenses</h3>
+            <p>Add a new bill, receipt, or shared expense. The total will be divided by the number of registered roommates and will be added as a credit to your balance. Expenses are also categorized for reporting!</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Add your payments</h3>
+            <p>It's easy to remember who paid who and when. This site will tell you which one of your roommates is owed money and how much you should be paying to each. You can log a new payment, mark the payment method, and even add a reference memo.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>View your balance</h3>
+            <p>The balance calculation ties together your expenses, payments, and roommate debt all into one number so you can see how much you or your roommates owe or are owed.</p>
+        </div>
+    </div>
+
 {% endblock %}
