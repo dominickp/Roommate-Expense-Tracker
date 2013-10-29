@@ -23,4 +23,4 @@ My project does slightly deviate from the requirements of P2. Firstly, I asked i
 - Make home page have better stats
 
 ### Thanks
-- Huge thank you to TigerC10 for sticking with me through those really tricky Symfony/Doctrine issues. I would have crammed so much junk in my controllers if you hadn't been there to help me as much as you did.
+Huge thank you to TigerC10 for sticking with me through those really tricky Symfony/Doctrine issues. I would have crammed so much junk in my controllers if you hadn't been there to help me as much as you did.
