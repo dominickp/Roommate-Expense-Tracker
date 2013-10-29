@@ -1,7 +1,9 @@
 html{
     background:none;
 }
-
+div#pageContent{
+    min-height: 400px;
+}
 .balance{
     font-size:36px;
     color: #759e1a;
