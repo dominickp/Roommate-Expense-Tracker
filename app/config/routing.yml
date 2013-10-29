@@ -18,7 +18,6 @@ _configurator:
 #    resource: routing.yml
 
 # AcmeDemoBundle routes (to be removed)
-_acme_demo:
-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
-
+_roommate:
+    resource: "@DominickRoommateBundle/Resources/config/routing.php"
 
