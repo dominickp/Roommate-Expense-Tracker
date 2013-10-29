@@ -10,12 +10,12 @@ My project does slightly deviate from the requirements of P2. Firstly, I asked i
 - Sign up
 - Log in
 - Log out
-- Add posts (Expenses)
-- See a list of all other users (Roommates)
-- Follow and unfollow other users (Linking your account to an Apartment)
-- View a stream of posts from the users they follow (Browse Expenses)
-- +1 other feature of your choosing - (Add and browse Payments)
-- +1 other feature of your choosing - (Calculate a Balance based on Expenses, Payments, and the # of roommates tied to your Apartment)
+- Add posts **(Expenses)**
+- See a list of all other users **(Roommates)**
+- Follow and unfollow other users **(Linking your account to an Apartment)**
+- View a stream of posts from the users they follow **(Browse Expenses)**
+- +1 other feature of your choosing - **(Add and browse Payments)**
+- +1 other feature of your choosing - **(Calculate a Balance based on Expenses, Payments, and the # of roommates tied to your Apartment)**
 
 ####Note for the person grading this:
 The majority of my code can be found in my bundle here: `/src/Dominick/RoommateBundle/`
