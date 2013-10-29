@@ -17,10 +17,13 @@ My project does slightly deviate from the requirements of P2. Firstly, I asked i
 - +1 other feature of your choosing - (Add and browse Payments)
 - +1 other feature of your choosing - (Calculate a Balance based on Expenses, Payments, and the # of roommates tied to your Apartment)
 
+####Note for the person grading this:
+The majority of my code can be found in my bundle here: `/src/Dominick/RoommateBundle/`
+
 ##Todo
 - Fix register with short password, lack of error
 - Split navigation into Expenses, Payments
 - Make home page have better stats
 
-### Thanks
+####Thanks
 Huge thank you to TigerC10 for sticking with me through those really tricky Symfony/Doctrine issues. I would have crammed so much junk in my controllers if you hadn't been there to help me as much as you did.
