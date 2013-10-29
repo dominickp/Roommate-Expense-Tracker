@@ -62,12 +62,12 @@ class ExpenseController extends Controller
 
             // Generate a token value so this expense can be referenced later
             $exp->setToken(substr(md5($exp->getDescription() . time()), 0, 8));
-var_dump($form);
+            //var_dump($form);
             $em->persist($exp);
             $em->flush();
 
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
-            //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+            return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
         return $this->render('DominickRoommateBundle:Expense:newexpense.html.twig', array(
             'form' => $form->createView(),
