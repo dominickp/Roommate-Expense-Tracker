@@ -1,3 +1,7 @@
+html{
+    background:none;
+}
+
 .balance{
     font-size:36px;
     color: #759e1a;
@@ -11,4 +15,9 @@
 .balance.small{
     font-size:22px;
     line-height: 18px;
+}
+#footer{
+    font-size:11px;
+    text-align: center;
+    color:#666;
 }
