@@ -32,11 +32,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li {% if app.request.get('_route') == 'dominick_roommate_homepage' %}class="active"{% else %}{% endif %}>
+                    <li {% if app.request.get('_route') == 'dominick_roommate_homepage' or app.request.get('_route') == 'dominick_roommate_apartmenthome' %}class="active"{% else %}{% endif %}>
                         <a href="{{ path('dominick_roommate_homepage') }}">Home</a></li>
                     {% if app.user %}
-                        <li><a href="{{ path('account_logout') }}">Logout</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown {% if app.request.get('_route') == 'apartment_register' or app.request.get('_route') == 'apartment_lookup' %}active{% else %}{% endif %}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Edit account</a></li>
@@ -44,7 +43,7 @@
                                 <li><a href="{{ path('apartment_lookup') }}">Lookup existing apartments</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown {% if app.request.get('_route') == 'expense_new' or app.request.get('_route') == 'expense_browse' or app.request.get('_route') == 'payment_new' %}active{% else %}{% endif %}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Expenses <b
                                         class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -53,6 +52,7 @@
                                 <li><a href="{{ path('payment_new') }}">Make a payment</a></li>
                             </ul>
                         </li>
+                        <li><a href="{{ path('account_logout') }}">Logout</a></li>
                     {% else %}
                         <li {% if app.request.get('_route') == 'account_login' %}class="active"{% else %}{% endif %}><a
                                     href="{{ path('account_login') }}">Login</a></li>
@@ -61,13 +61,9 @@
                     {% endif %}
 
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <p class="navbar-text pull-right">{% if app.user %}
+
+                <p class="navbar-text pull-right">
+                    {% if app.user %}
                         Signed in as {{ app.user.fullname }}.
                     {% else %}
                         Welcome.
@@ -86,7 +82,7 @@
     <div id="footer" class="container">
         <div class="row">
             <div class="col-md-12">
-                Roommate Expense Tracker - <a href="https://github.com/dominickp/p2.kaomoj.in" target="_blank">GitHub</a> - &copy; Dominick Peluso 2013 - Project 2 for <a href="http://dwa15.com/" target="_blank">CSCI E-15 Dynamic Web Applications</a>
+                Roommate Expense Tracker - <a href="https://github.com/dominickp/p2.kaomoj.in" target="_blank">GitHub</a> - &copy; 2013 Dominick Peluso - Project 2 for <a href="http://dwa15.com/" target="_blank">CSCI E-15 Dynamic Web Applications</a>
             </div>
         </div>
     </div>
