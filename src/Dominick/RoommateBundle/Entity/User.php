@@ -49,7 +49,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min="8")
+     * @Assert\Length(min="6", minMessage="Your password is not long enough!")
      * @ORM\Column(type="string", length=64)
      * @var string
      */

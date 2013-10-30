@@ -49,7 +49,7 @@ class UserController extends Controller
         // When the user submits the form, handleRequest() recognizes this and immediately writes the submitted data
         // back into the task and dueDate properties of the $task object.
         $form->handleRequest($request);
-        //var_dump($form);
+
         // If the form is valid, we should be submitting the data, right?
         if ($form->isValid())
         {
@@ -81,6 +81,8 @@ class UserController extends Controller
 
             // You did a great jerrrb.
             return $this->redirect($this->generateUrl('dominick_roommate_loggedin'));
+        } else {
+
         }
 
         return $this->render('DominickRoommateBundle:User:register.html.twig', array(

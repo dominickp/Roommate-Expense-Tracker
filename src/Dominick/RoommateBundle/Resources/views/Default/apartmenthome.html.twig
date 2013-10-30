@@ -41,21 +41,14 @@
                 </div>
             </div>
             <hr>
-            <p>If your balance is positive, then you need to be paid. If its negative, you need to pay other roommates or register a new expense to lower it. The payment controller will have to pull in the balances for all other roommates, then let determine which you would like to pay to bring down your balance until its 0 or positive.</p>
+            <p>
+                If your balance is more than $0.00, you should prompt your roommates to issue you a payment. If your balance is below $0.00, you should make a payment to one or more of your roommates to balance things out. Alternatively, you could register a new expense which is another way to credit your balance.
+            </p>
 
-
-
-            <a class="btn btn-primary" href="{{ path('expense_new') }}">Create a new expense</a>
-            <a class="btn btn-primary" href="{{ path('expense_browse') }}">Browse Expenses</a>
-            <a class="btn btn-primary" href="{{ path('payment_new') }}">Make a payment</a>
-
-            <hr>
-            {#
-            <p>Apartment total: {{ totals.cost }}</p>
-            <p>Roommate average (target, apartmentTotalExpenses / numOfRoommates): {{ totals.roommateCost }}</p>
-            <p>Your total paid (sum of expenses + payments with my apartment id/user): $400</p>
-            <p>Your balance (totalPaid - roommateAverage): +$150</p>
-            #}
+            <ul class="nav nav-pills">
+                <li><a href="{{ path('expense_new') }}">Create a new expense</a></li>
+                <li><a href="{{ path('payment_new') }}">Make a payment</a></li>
+            </ul>
 
         </div>
         <div class="col-md-3 col-md-offset-1">
