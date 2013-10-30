@@ -2,7 +2,7 @@ html{
     background:none;
 }
 h1,h2,h3,h4,h5,h6,h7{
-    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     -webkit-text-stroke: 0.3px;
 }
@@ -27,4 +27,10 @@ div#pageContent{
     font-size:11px;
     text-align: center;
     color:#666;
+}
+
+#teaser .thumbnail img{
+    max-width:100%;
+    display:block;
+    margin:auto;
 }
