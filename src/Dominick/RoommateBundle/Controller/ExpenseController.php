@@ -44,11 +44,12 @@ class ExpenseController extends Controller
                     'entertainment' => 'Entertainment / Fun',
                     'moving' => 'Moving',
                     'utility' => 'Utilities',
-                    'cleaning' => 'Cleaning Supplies',
+                    'household' => 'Household',
+                    'groceries' => 'Groceries',
                     'furniture' => 'Furniture / Decoration',
                     'other' => 'Other',
                 ),
-                'preferred_choices' => array('utility'),
+                'preferred_choices' => array('other'),
             ))
             ->add('cost', 'money', array(
                 'currency' => 'USD',
