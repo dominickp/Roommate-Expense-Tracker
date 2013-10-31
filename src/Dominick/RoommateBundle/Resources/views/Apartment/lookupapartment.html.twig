@@ -29,7 +29,11 @@
                                 {{ apartment.city }}, {{ apartment.state }} {{ apartment.zip }}
                             </small>
                         </td>
-                        <td>Roommates</td>
+                        <td>
+                            {% for roommate in apartment.getUsers() %}
+                                <span class="label label-warning">{{ roommate.getFullname }}</span>
+                            {% endfor %}
+                        </td>
                         <td><a href="{{ path('apartment_set', {'id': apartment.id }) }}" class="btn btn-primary">Set as
                                 apartment</a></td>
                     </tr>
