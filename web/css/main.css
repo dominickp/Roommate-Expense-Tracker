@@ -32,11 +32,25 @@ div#pageContent{
     margin-top:50px;
     margin-bottom: 10px;
 }
-
+#teaser .thumbnail{
+    min-height: 180px;
+}
+#teaser .thumbnail h3{
+    margin-top: 0;
+}
 #teaser .thumbnail img{
     max-width:100%;
     display:block;
     margin:auto;
+}
+.carousel-control.right{
+    background:0 !important;
+    margin-right: -40px;
+}
+
+.carousel-control.left {
+    background:0 !important;
+    margin-left:-60px;
 }
 
 .label.expensetype{
