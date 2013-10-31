@@ -33,31 +33,35 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li {% if app.request.get('_route') == 'dominick_roommate_homepage' or app.request.get('_route') == 'dominick_roommate_apartmenthome' %}class="active"{% else %}{% endif %}>
-                        <a href="{{ path('dominick_roommate_homepage') }}">Home</a></li>
+                        <a href="{{ path('dominick_roommate_homepage') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                     {% if app.user %}
                         <li class="dropdown {% if app.request.get('_route') == 'apartment_register' or app.request.get('_route') == 'apartment_lookup' %}active{% else %}{% endif %}">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Account <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Edit account</a></li>
                                 <li><a href="{{ path('apartment_register') }}">Create new apartment</a></li>
                                 <li><a href="{{ path('apartment_lookup') }}">Lookup existing apartments</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown {% if app.request.get('_route') == 'expense_new' or app.request.get('_route') == 'expense_browse' or app.request.get('_route') == 'payment_new' %}active{% else %}{% endif %}">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Expenses <b
-                                        class="caret"></b></a>
+                        <li class="dropdown {% if app.request.get('_route') == 'expense_new' or app.request.get('_route') == 'expense_browse' %}active{% else %}{% endif %}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Expenses <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ path('expense_new') }}">New expense</a></li>
                                 <li><a href="{{ path('expense_browse') }}">Browse expenses</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown {% if app.request.get('_route') == 'payment_new' %}active{% else %}{% endif %}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-usd"></span> Payments <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
                                 <li><a href="{{ path('payment_new') }}">Make a payment</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ path('account_logout') }}">Logout</a></li>
+                        <li><a href="{{ path('account_logout') }}"><span class="glyphicon glyphicon-remove-circle"></span> Logout</a></li>
                     {% else %}
                         <li {% if app.request.get('_route') == 'account_login' %}class="active"{% else %}{% endif %}><a
-                                    href="{{ path('account_login') }}">Login</a></li>
+                                    href="{{ path('account_login') }}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
                         <li {% if app.request.get('_route') == 'account_register' %}class="active"{% else %}{% endif %}>
-                            <a href="{{ path('account_register') }}">Sign Up</a></li>
+                            <a href="{{ path('account_register') }}"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a></li>
                     {% endif %}
 
                 </ul>
