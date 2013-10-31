@@ -33,12 +33,7 @@
 
             <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary' }}) }}</p>
             {{ form_end(form) }}
-        {% else %}
-            <div class="alert alert-warning">
-                <strong>Uhoh!</strong>
-                You need some roommates before you can start making payments!
-            </div>
-        {% endif %}
+
         </div>
         <div class="col-md-8">
             <h3>How to Make a Proper Payment</h3>
@@ -56,6 +51,12 @@
                     ${% if roommate.balanceNegative != true %}+{% endif %}{{ roommate.balance|number_format(2, '.', ',') }}
                     </span></li>
                 {% endfor %}
+            {% else %}
+                <div class="alert alert-warning">
+                    <strong>Uhoh!</strong>
+                    You need some roommates before you can start making payments!
+                </div>
+            {% endif %}
             </ul>
 
 
