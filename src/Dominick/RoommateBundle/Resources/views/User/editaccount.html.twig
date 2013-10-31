@@ -40,7 +40,7 @@
                 <h4>
                     {{ apartment.nickname }}
                     <p>
-                        <small>{{ apartment.address1 }}, {{ apartment.address2 }}, {{ apartment.city }}
+                        <small>{{ apartment.address1 }}, {% if  apartment.address2  %}{{ apartment.address2 }}, {% endif %}{{ apartment.city }}
                             , {{ apartment.state }} {{ apartment.zip }}</small>
                     </p>
                 </h4>

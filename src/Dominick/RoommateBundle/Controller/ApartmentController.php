@@ -33,7 +33,7 @@ class ApartmentController extends Controller
         $form = $this->createFormBuilder($apt)
             ->add('nickname', 'text')
             ->add('address1', 'text')
-            ->add('address2', 'text')
+            ->add('address2', 'text', array('required' => false))
             ->add('city', 'text')
             ->add('state', 'text')
             ->add('zip', 'text')
