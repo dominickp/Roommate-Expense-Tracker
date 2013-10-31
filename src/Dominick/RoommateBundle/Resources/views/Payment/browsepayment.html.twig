@@ -30,9 +30,8 @@
                         </tr>
                     {% endfor %}
                     <tr>
-                        <td class="text-right" colspan=2"><strong>Expense Totals</strong></td>
-                        <td class="text-right">$ </td>
-                        <td class="text-right">$ </td>
+                        <td class="text-right" colspan=3"><strong>Payment Totals</strong></td>
+                        <td class="text-right">$ {{ totals.paymentTotal|number_format(2, '.', ',') }}</td>
                         <td></td>
                     </tr>
                 </table>

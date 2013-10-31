@@ -262,10 +262,8 @@ class PaymentController extends Controller
 
         // Tally some totals which I'll use later
         $totals = array(
-            'cost' => 0,
-            'expenses' => 0,
             'roommates' => 0,
-            'roommateCost' => 0
+            'paymentTotal' => 0
         );
 
         // Pull all of the expenses tied to this apartment
@@ -292,6 +290,10 @@ class PaymentController extends Controller
 
         // To calculate stuff like the cost per roommate, I'll need to tally the number of roommates
         $totals['roommates'] = count($users);
+
+        foreach($aptPayment as $pay){
+            $totals['paymentTotal'] += $pay->getAmount();
+        }
 
         // If there are no expenses, send to the same view without the variable
         if (!$aptPayment) {
