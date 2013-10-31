@@ -22,6 +22,8 @@ div#pageContent{
 .balance.small{
     font-size:22px;
     line-height: 18px;
+    top: 2px;
+    position: relative;
 }
 #footer{
     font-size:11px;
