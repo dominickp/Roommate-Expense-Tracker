@@ -1,0 +1,52 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Browse Payments" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Lookup Payments</h3>
+
+            <p>Check out the history of payments made between roommates.</p>
+            {% if payments is defined %}
+                <table class="table table-bordered table-hover table table-condensed">
+                    <tr>
+                        <th>Payer</th>
+                        <th>Recipient</th>
+                        <th>memo</th>
+                        <th class="text-right">Amount</th>
+                        <th>Date</th>
+                    </tr>
+                    {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
+                    {% for payment in payments %}
+                        <tr id="{{ payment.id }}">
+                            <td>{{ payment.getUser().getFullname() }}</td>
+                            <td>{{ payment.getRecipient().getFullname() }}</td>
+                            <td>{{ payment.memo }}</td>
+                            <td class="text-right">$ {{ payment.amount|number_format(2, '.', ',') }}</td>
+                            <td>{{ payment.created|date('Y-m-d') }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td class="text-right" colspan=2"><strong>Expense Totals</strong></td>
+                        <td class="text-right">$ </td>
+                        <td class="text-right">$ </td>
+                        <td></td>
+                    </tr>
+                </table>
+            {% else %}
+                <em>No expense history found for this apartment.</em>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <h3>Need to log a new payment?</h3>
+
+            <p>No worries. Click the button below to go add a new one.
+
+            <p><a class="btn btn-primary" href="{{ path('payment_new') }}">Log a new payment</a></p>
+        </div>
+    </div>
+{% endblock %}
+

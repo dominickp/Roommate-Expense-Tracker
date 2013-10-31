@@ -253,5 +253,59 @@ class PaymentController extends Controller
 
         return $this->render('DominickRoommateBundle:Payment:newpayment.html.twig', $return);
     }
+    public function browsePaymentAction()
+    {
+        // Load up the user & apartment IDs so I can use it for limiting the browse results
+        // $securityContext = $this->container->get('security.context');
+        $currentUser = $this->getUser();
+        $currentApartmentId = $currentUser->getApartment()->getId();
+
+        // Tally some totals which I'll use later
+        $totals = array(
+            'cost' => 0,
+            'expenses' => 0,
+            'roommates' => 0,
+            'roommateCost' => 0
+        );
+
+        // Pull all of the expenses tied to this apartment
+        $aptPayment = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:Payment')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
+
+        // Pull User to use for converting IDs to names in the view
+        $users = $this->getDoctrine()
+            ->getRepository('DominickRoommateBundle:User')
+            //    ->findAll();
+            ->findBy(
+                array('apartmentId' => $currentApartmentId), // $where
+                array('created' => 'ASC'), // $orderBy
+                999, // $limit
+                0 // $offset
+            );
+
+        // To calculate stuff like the cost per roommate, I'll need to tally the number of roommates
+        $totals['roommates'] = count($users);
+
+        // If there are no expenses, send to the same view without the variable
+        if (!$aptPayment) {
+            return $this->render('DominickRoommateBundle:Payment:browsepayment.html.twig', array(
+                //   'results' => '',
+            ));
+        }
+
+        // If we have expenses, send all the data to the view
+        return $this->render('DominickRoommateBundle:Payment:browsepayment.html.twig', array(
+            'payments' => $aptPayment,
+            'totals' => $totals,
+            'users' => $users,
+        ));
+    }
 }
 ?>

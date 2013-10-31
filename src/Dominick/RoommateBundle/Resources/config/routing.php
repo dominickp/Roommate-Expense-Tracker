@@ -49,9 +49,11 @@ $collection->add('expense_browse', new Route('/expense/browse/', array(
 )));
 
 # PAYMENTS
-# EXPENSES
 $collection->add('payment_new', new Route('/payment/new/', array(
     '_controller' => 'DominickRoommateBundle:Payment:newPayment',
+)));
+$collection->add('payment_browse', new Route('/payment/browse/', array(
+    '_controller' => 'DominickRoommateBundle:Payment:browsePayment',
 )));
 
 /* I don't think I need this anymore
