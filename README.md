@@ -23,6 +23,7 @@ My project does slightly deviate from the requirements of P2. Firstly, I asked i
 The majority of my code can be found in my bundle here: `/src/Dominick/RoommateBundle/`
 
 ##Todo
+- Add Apartment password so random people can't join your apartment and screw with your expenses
 - Fix register with short password, lack of error
 - Make home page have better stats
 - Edit payments
