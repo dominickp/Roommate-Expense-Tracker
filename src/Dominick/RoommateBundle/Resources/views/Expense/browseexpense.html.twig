@@ -6,7 +6,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <h3>Lookup Expenses</h3>
 
             <p>Check out the history of expenses for your apartment.</p>
@@ -23,7 +23,7 @@
                     {% for expense in expenses %}
                         <tr id="{{ expense.token }}">
                             <td>{{ expense.getUser().getFullname() }}</td>
-                            <td>{{ expense.description }}</td>
+                            <td>{{ expense.description }} <span class="label expensetype label-{{ expense.type }}">{{ expense.type }}</span></td>
                             <td class="text-right">$ {{ expense.cost|number_format(2, '.', ',') }}</td>
                             <td class="text-right">$ {{ expense.perRoommateCost|number_format(2, '.', ',') }}</td>
                             <td>{{ expense.created|date('Y-m-d') }}</td>
@@ -40,7 +40,7 @@
                 <em>No expense history found for this apartment.</em>
             {% endif %}
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <h3>Need to add a new expense?</h3>
 
             <p>No worries. Click the button below to go add a new one.

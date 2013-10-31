@@ -34,3 +34,16 @@ div#pageContent{
     display:block;
     margin:auto;
 }
+
+.label.expensetype{
+    float:right;
+}
+
+.label-utility{         background-color: #5cb85c;}
+.label-entertainment{   background-color: #428bca;}
+.label-moving{          background-color: #f0ad4e;}
+.label-household{       background-color: #5bc0de;}
+.label-groceries{       background-color: #9374eb;}
+.label-furniture{       background-color: #d9534f;}
+.label-other{           background-color: #999;}
+
