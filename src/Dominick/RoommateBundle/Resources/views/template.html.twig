@@ -35,14 +35,7 @@
                     <li {% if app.request.get('_route') == 'dominick_roommate_homepage' or app.request.get('_route') == 'dominick_roommate_apartmenthome' %}class="active"{% else %}{% endif %}>
                         <a href="{{ path('dominick_roommate_homepage') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                     {% if app.user %}
-                        <li class="dropdown {% if app.request.get('_route') == 'apartment_register' or app.request.get('_route') == 'apartment_lookup' %}active{% else %}{% endif %}">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Account <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Edit account</a></li>
-                                <li><a href="{{ path('apartment_register') }}">Create new apartment</a></li>
-                                <li><a href="{{ path('apartment_lookup') }}">Lookup existing apartments</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="{{ path('account_edit') }}"><span class="glyphicon glyphicon-user"></span> Account</a></li>
                         <li class="dropdown {% if app.request.get('_route') == 'expense_new' or app.request.get('_route') == 'expense_browse' %}active{% else %}{% endif %}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Expenses <b class="caret"></b></a>
                             <ul class="dropdown-menu">

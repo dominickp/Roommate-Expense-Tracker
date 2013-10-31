@@ -40,6 +40,11 @@ $collection->add('apartment_set', new Route('/residence/set/{id}', array(
     '_controller' => 'DominickRoommateBundle:Apartment:setApartmentId',
 )));
 
+# USER ACCOUNT
+$collection->add('account_edit', new Route('/account', array(
+    '_controller' => 'DominickRoommateBundle:User:editAccount',
+)));
+
 # EXPENSES
 $collection->add('expense_new', new Route('/expense/new/', array(
     '_controller' => 'DominickRoommateBundle:Expense:newExpense',

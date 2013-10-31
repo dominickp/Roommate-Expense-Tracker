@@ -1,0 +1,60 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Edit Account" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            {% if success == true %}<div class="alert alert-success"><strong>Success!</strong> Your account was successfully updated.</div>{% endif %}
+            <h3>Edit Your Account</h3>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_label(form.fullname, 'Full Name') }}
+            {{ form_errors(form.fullname) }}
+            {{ form_widget(form.fullname, {'attr': {'class': 'form-control' }}) }}
+
+            {{ form_label(form.username, 'Email') }}
+            {{ form_errors(form.username) }}
+            {{ form_widget(form.username, {'attr': {'class': 'form-control' }}) }}
+
+            {{ form_errors(form.password) }}
+
+            {% for passwordField in form.password %}
+                <div class="form-field">
+                    {{ form_label(passwordField, null, { 'attr': {'class': 'form-label'} }) }}
+                    {{ form_widget(passwordField, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            {% endfor %}
+            <br>
+
+            <p>{{ form_widget(form.Update, {'attr': {'class': 'btn btn-primary' }}) }}</p>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-8">
+            <h3>Linked Apartment</h3>
+            <p>Your account is tied to the following apartment. If this is not correct, or if you are changing apartments, you can create a new apartment below or browse and join a existing apartment someone has already created.</p>
+            <blockquote>
+                <h4>
+                    {{ apartment.nickname }}
+                    <p>
+                        <small>{{ apartment.address1 }}, {{ apartment.address2 }}, {{ apartment.city }}
+                            , {{ apartment.state }} {{ apartment.zip }}</small>
+                    </p>
+                </h4>
+            </blockquote>
+            <h4>Linked Roommates</h4>
+            <ul>
+            {% for roommate in roommates %}
+                <li>{{ roommate.fullname }}</li>
+            {% endfor %}
+            </ul>
+            <hr>
+            <a class="btn btn-primary" href="{{ path('apartment_register') }}">Create new apartment</a>
+            <a class="btn btn-primary" href="{{ path('apartment_lookup') }}">Lookup existing apartments</a>
+        </div>
+    </div>
+{% endblock %}
+
