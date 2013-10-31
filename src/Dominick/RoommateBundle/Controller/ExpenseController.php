@@ -40,8 +40,15 @@ class ExpenseController extends Controller
         $form = $this->createFormBuilder($exp)
             ->add('description', 'text')
             ->add('type', 'choice', array(
-                'choices' => array('foo' => 'Foo', 'bar' => 'Bar', 'baz' => 'Baz'),
-                'preferred_choices' => array('baz'),
+                'choices' => array(
+                    'entertainment' => 'Entertainment / Fun',
+                    'moving' => 'Moving',
+                    'utility' => 'Utilities',
+                    'cleaning' => 'Cleaning Supplies',
+                    'furniture' => 'Furniture / Decoration',
+                    'other' => 'Other',
+                ),
+                'preferred_choices' => array('utility'),
             ))
             ->add('cost', 'money', array(
                 'currency' => 'USD',
