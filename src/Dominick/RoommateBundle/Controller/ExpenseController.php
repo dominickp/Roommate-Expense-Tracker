@@ -167,7 +167,7 @@ class ExpenseController extends Controller
             ->add('cost', 'money', array(
                 'currency' => 'USD',
             ))
-            ->add('Save', 'submit')
+            ->add('Update', 'submit')
             ->getForm();
 
         $form->handleRequest($request);
