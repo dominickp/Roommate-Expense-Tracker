@@ -101,7 +101,8 @@ class ApartmentController extends Controller
         $apartment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Apartment')->findOneBy(array('id'=>$id));
         $apartmentPin = $apartment->getPin();
         // This is how you auto fill form data
-        // $task->setTask('Write a blog post');
+        //
+        $apartment->setPin('');
 
         $form = $this->createFormBuilder($apartment)
             ->add('pin', 'text')
