@@ -18,6 +18,7 @@
                         <th class="text-right">Total Paid</th>
                         <th class="text-right">Roommate Cost</th>
                         <th>Date</th>
+                        <th>Edit</th>
                     </tr>
                     {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
                     {% for expense in expenses %}
@@ -27,12 +28,17 @@
                             <td class="text-right">$ {{ expense.cost|number_format(2, '.', ',') }}</td>
                             <td class="text-right">$ {{ expense.perRoommateCost|number_format(2, '.', ',') }}</td>
                             <td>{{ expense.created|date('Y-m-d') }}</td>
+                            <td>
+                                <a class="btn btn-primary btn-xs" href="{{ path('expense_edit', {'id':expense.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></a>
+                            </td>
                         </tr>
                     {% endfor %}
                     <tr>
                         <td class="text-right" colspan=2"><strong>Expense Totals</strong></td>
                         <td class="text-right">$ {{ totals.cost|number_format(2, '.', ',') }}</td>
                         <td class="text-right">$ {{ totals.roommateCost|number_format(2, '.', ',') }}</td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </table>

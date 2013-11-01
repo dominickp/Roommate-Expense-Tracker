@@ -81,11 +81,6 @@ class ExpenseController extends Controller
             'form' => $form->createView(),
         ));
     }
-
-    public function testAction()
-    {
-        return 'test';
-    }
     public function browseExpenseAction()
     {
         // Load up the user & apartment IDs so I can use it for limiting the browse results
@@ -147,5 +142,56 @@ class ExpenseController extends Controller
             'totals' => $totals,
             'users' => $users,
         ));
+    }
+    public function editExpenseAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $expense = $this->getDoctrine()->getRepository('DominickRoommateBundle:Expense')->find($id);
+        $user = $this->getUser();
+
+        $form = $this->createFormBuilder($expense)
+            ->add('description', 'text')
+            ->add('type', 'choice', array(
+                'choices' => array(
+                    'entertainment' => 'Entertainment / Fun',
+                    'moving' => 'Moving',
+                    'utility' => 'Utilities',
+                    'household' => 'Household',
+                    'groceries' => 'Groceries',
+                    'furniture' => 'Furniture / Decoration',
+                    'other' => 'Other',
+                ),
+                'preferred_choices' => array('other'),
+            ))
+            ->add('cost', 'money', array(
+                'currency' => 'USD',
+            ))
+            ->add('Save', 'submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $exp = $form->getData();
+
+            $em->persist($exp);
+            $em->flush();
+            return $this->redirect($this->generateUrl('expense_browse'));
+        }
+
+        // Checking to see if you are actually editing an expense from your own apartment. If not, you get the boot!
+        if($user->getApartment()->getId() == $expense->getApartmentId()){
+            return $this->render('DominickRoommateBundle:Expense:editexpense.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        } else {
+            return $this->redirect($this->generateUrl('expense_browse'));
+        }
+
+
+       // $em->persist($user);
+        //$em->flush();
+
     }
 }

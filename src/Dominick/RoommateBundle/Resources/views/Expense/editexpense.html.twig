@@ -1,15 +1,15 @@
 {% extends "DominickRoommateBundle::layout.html.twig" %}
 
-{% block title "Create a New Expense" %}
+{% block title "Edit an Expense" %}
 
 {% block content_header '' %}
 
 {% block content %}
     <div class="row">
         <div class="col-md-4">
-            <h3>Create a new expense</h3>
+            <h3>Edit an expense</h3>
 
-            <p>You can use this page to add a new expense which you paid for that should be split with the rest of your roommates.</p>
+            <p>Did someone make a mistake on an expense? Use this form to correct it.</p>
 
             {{ form_start(form) }}
             {{ form_errors(form) }}
