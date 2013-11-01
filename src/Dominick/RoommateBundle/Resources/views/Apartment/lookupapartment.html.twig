@@ -14,7 +14,7 @@
             <table class="table table-bordered table-hover table table-condensed">
                 <tr>
                     <th>Nick Name</th>
-                    <th>Address</th>
+                    <th>Location</th>
                     <th>Roommates</th>
                     <th>Select</th>
                 </tr>
@@ -23,9 +23,6 @@
                         <td>{{ apartment.nickname }}</td>
                         <td>
                             <small>
-                                {{ apartment.address1 }}
-                                {% if apartment.address2 is not empty %}, {{ apartment.address2 }}{% endif %}
-                                <br>
                                 {{ apartment.city }}, {{ apartment.state }} {{ apartment.zip }}
                             </small>
                         </td>
