@@ -37,6 +37,7 @@ class ApartmentController extends Controller
             ->add('city', 'text')
             ->add('state', 'text')
             ->add('zip', 'text')
+            ->add('pin', 'text')
 
             ->add('Save', 'submit')
             ->getForm();

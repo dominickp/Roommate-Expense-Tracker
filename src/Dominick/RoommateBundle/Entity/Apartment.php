@@ -47,6 +47,10 @@ class Apartment
      * @ORM\Column(type="string", length=60, nullable=true)
      */
     protected $zip;
+    /**
+     * @ORM\Column(type="string", length=8, nullable=false)
+     */
+    protected $pin;
 
     /**
      * Get id
@@ -194,6 +198,29 @@ class Apartment
     public function getZip()
     {
         return $this->zip;
+    }
+
+    /**
+     * Set pin
+     *
+     * @param string $pin
+     * @return Apartment
+     */
+    public function setPin($pin)
+    {
+        $this->pin = $pin;
+
+        return $this;
+    }
+
+    /**
+     * Get pin
+     *
+     * @return string
+     */
+    public function getPin()
+    {
+        return $this->pin;
     }
 
     /**
