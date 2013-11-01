@@ -66,6 +66,9 @@ $collection->add('payment_new', new Route('/payment/new/', array(
 $collection->add('payment_browse', new Route('/payment/browse/', array(
     '_controller' => 'DominickRoommateBundle:Payment:browsePayment',
 )));
+$collection->add('payment_edit', new Route('/payment/edit/{id}', array(
+    '_controller' => 'DominickRoommateBundle:Payment:editPayment',
+)));
 
 /* I don't think I need this anymore
 $collection->add('account_create', new Route('/register/create', array(

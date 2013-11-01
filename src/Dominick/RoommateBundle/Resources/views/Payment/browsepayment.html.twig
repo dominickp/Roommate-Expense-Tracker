@@ -18,6 +18,7 @@
                         <th>memo</th>
                         <th class="text-right">Amount</th>
                         <th>Date</th>
+                        <th>Edit</th>
                     </tr>
                     {#{% for user in users %}{{ user.getFullname() }}{% endfor %}#}
                     {% for payment in payments %}
@@ -27,11 +28,15 @@
                             <td>{{ payment.memo }}</td>
                             <td class="text-right">$ {{ payment.amount|number_format(2, '.', ',') }}</td>
                             <td>{{ payment.created|date('Y-m-d') }}</td>
+                            <td class="text-center">
+                                <a title="Edit this expense" class="btn btn-primary btn-xs" href="{{ path('payment_edit', {'id':payment.id}) }}"><span class="glyphicon glyphicon-pencil"></span></a>
+                            </td>
                         </tr>
                     {% endfor %}
                     <tr>
                         <td class="text-right" colspan=3"><strong>Payment Totals</strong></td>
                         <td class="text-right">$ {{ totals.paymentTotal|number_format(2, '.', ',') }}</td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </table>

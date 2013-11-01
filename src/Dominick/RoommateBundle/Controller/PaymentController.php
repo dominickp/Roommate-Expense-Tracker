@@ -309,5 +309,63 @@ class PaymentController extends Controller
             'users' => $users,
         ));
     }
+    public function editPaymentAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $payment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Payment')->findOneBy(array('id'=>$id));
+
+        $currentUser = $this->getUser();
+        $currentApartment = $currentUser->getApartment();
+        $currentRoommates = $currentApartment->getUsers();
+
+        $payer = $payment->getUser();
+
+        foreach($currentRoommates as $key => $bro){
+            // Remove payer from the list of recipients on the form
+            if($payer->getId() == $bro->getId()){
+                unset($currentRoommates[$key]);
+            }
+        }
+
+        $form = $this->createFormBuilder($payment)
+            ->add('memo', 'text')
+            ->add('method', 'choice', array(
+                'choices' => array('cash' => 'Cash', 'check' => 'Check', 'bank_transfer' => 'Bank Transfer'),
+                'preferred_choices' => array('check'),
+            ))
+            ->add('amount', 'money', array(
+                'currency' => 'USD',
+            ))
+
+            ->add('recipient', 'entity', array(
+                'class' => 'DominickRoommateBundle:User',
+                'choices' => $currentRoommates,
+            ))
+            ->add('Update', 'submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $pay = $form->getData();
+
+            $em->persist($pay);
+            $em->flush();
+            return $this->redirect($this->generateUrl('payment_browse'));
+        }
+
+        // Checking to see if you are actually editing an expense from your own apartment. If not, you get the boot!
+        if($currentUser->getApartment()->getId() == $payment->getApartmentId()){
+
+            return $this->render('DominickRoommateBundle:Payment:editpayment.html.twig', array(
+                'form' => $form->createView(),
+                'payment' => $payment,
+                'payer' => $payer,
+            ));
+        } else {
+            return $this->redirect($this->generateUrl('payment_browse'));
+        }
+    }
 }
 ?>
