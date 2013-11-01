@@ -367,5 +367,21 @@ class PaymentController extends Controller
             return $this->redirect($this->generateUrl('payment_browse'));
         }
     }
+    public function deletePaymentAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $payment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Payment')->findOneBy(array('id'=>$id));
+        $user = $this->getUser();
+
+        // Checking to see if you are actually deleting an expense from your own apartment. If not, you get the boot!
+        if($user->getApartment()->getId() == $payment->getApartmentId()){
+            $em->remove($payment);
+            $em->flush();
+            //echo $expense->getDescription();
+            return $this->redirect($this->generateUrl('payment_browse'));
+        } else {
+            return $this->redirect($this->generateUrl('payment_browse'));
+        }
+    }
 }
 ?>

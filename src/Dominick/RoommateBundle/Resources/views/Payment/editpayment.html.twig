@@ -35,7 +35,9 @@
 
         </div>
         <div class="col-md-8">
-
+            <h3>Permanently Delete</h3>
+            <p>Alternatively, you can delete this payment by clicking the button below.</p>
+            <p><a class="btn btn-danger btn-xs" href="{{ path('payment_delete', {'id':payment.getId}) }}"><span class="glyphicon glyphicon-remove"></span> Delete this payment</a></p>
         </div>
     </div>
 {% endblock %}
