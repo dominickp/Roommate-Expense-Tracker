@@ -113,8 +113,8 @@ class ApartmentController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            echo $apartmentPin;
-            if($request->request->get('form')->get('pin') == $apartmentPin){
+            print_r($request->request->get('form'));
+            /*if($request->request->get('form')->get('pin') == $apartmentPin){
                 //echo 'YOU GOT IT';
                 $user = $this->getUser();
                 $user->setApartment($apartment);
@@ -127,7 +127,7 @@ class ApartmentController extends Controller
                     'apartment' => $apartment,
                     'fail' => true,
                 ));
-            }
+            }*/
             //if($form->get)
             //$user = $this->getUser();
             //$user->setApartment($apartment);
