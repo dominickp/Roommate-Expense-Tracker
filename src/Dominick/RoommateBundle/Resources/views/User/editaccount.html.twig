@@ -36,6 +36,7 @@
         <div class="col-md-8">
             <h3>Linked Apartment</h3>
             <p>Your account is tied to the following apartment. If this is not correct, or if you are changing apartments, you can create a new apartment below or browse and join a existing apartment someone has already created.</p>
+            <h4>Roommate Pin <span class="label label-warning">{{ apartment.pin }}</span></h4>
             <blockquote>
                 <h4>
                     {{ apartment.nickname }}
@@ -45,6 +46,7 @@
                     </p>
                 </h4>
             </blockquote>
+
             <h4>Linked Roommates</h4>
             <ul>
             {% for roommate in roommates %}

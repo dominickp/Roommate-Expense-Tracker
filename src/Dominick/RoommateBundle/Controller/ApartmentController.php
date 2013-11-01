@@ -95,17 +95,52 @@ class ApartmentController extends Controller
         ));
     }
 
-    public function setApartmentIdAction($id)
+    public function setApartmentIdAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
+        $apartment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Apartment')->findOneBy(array('id'=>$id));
+        $apartmentPin = $apartment->getPin();
+        // This is how you auto fill form data
+        // $task->setTask('Write a blog post');
 
-        $apartment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Apartment')->find($id);
-        $user = $this->getUser();
-        $user->setApartment($apartment);
+        $form = $this->createFormBuilder($apartment)
+            ->add('pin', 'text')
 
-        $em->persist($user);
-        $em->flush();
+            ->add('Save', 'submit')
+            ->getForm();
 
-        return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            echo $apartmentPin;
+            if($request->request->get('form')['pin'] == $apartmentPin){
+                //echo 'YOU GOT IT';
+                $user = $this->getUser();
+                $user->setApartment($apartment);
+                $em->persist($user);
+                $em->flush();
+                return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+            } else {
+                return $this->render('DominickRoommateBundle:Apartment:verifyapartment.html.twig', array(
+                    'form' => $form->createView(),
+                    'apartment' => $apartment,
+                    'fail' => true,
+                ));
+            }
+            //if($form->get)
+            //$user = $this->getUser();
+            //$user->setApartment($apartment);
+
+            //$em->persist($user);
+            //$em->flush();
+            //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
+        }
+
+        return $this->render('DominickRoommateBundle:Apartment:verifyapartment.html.twig', array(
+            'form' => $form->createView(),
+            'apartment' => $apartment,
+        ));
+
+
     }
 }

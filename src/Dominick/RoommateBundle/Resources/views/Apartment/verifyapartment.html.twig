@@ -1,0 +1,38 @@
+{% extends "DominickRoommateBundle::layout.html.twig" %}
+
+{% block title "Register an Apartment" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            {% if fail is defined %}
+                <div class="alert alert-danger">Sorry, that's not the PIN. Get the valid PIN from one of your roommates.</div>
+            {% endif %}
+            <h3>Verify PIN</h3>
+
+            <p>The roommate who registered this apartment set a PIN (also visible from their Account page). You'll need to enter that PIN correctly to join.</p>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_label(form.pin, 'PIN*') }}
+            {{ form_errors(form.pin) }}
+            {{ form_widget(form.pin, {'attr': {'class': 'form-control', 'placeholder': '1337' }}) }}
+
+            <br>
+
+            <p>{{ form_widget(form.Save, {'attr': {'class': 'btn btn-primary' }}) }}</p>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-8">
+            <h3>Look up other apartments</h3>
+            <p>If one of your roommates already registered your apartment, you can search for it below.</p>
+            <p><a class="btn btn-primary" href="{{ path('apartment_lookup') }}">Lookup Apartments</a></p>
+            <hr>
+            <h4>*Why are you asking me for a PIN?</h4>
+            The Roommate PIN is a simple passcode which you can give to your roommates to authenticate them with your apartment. This is just so that random strangers can't join your apartment and look at your expenses.
+        </div>
+    </div>
+{% endblock %}
+
