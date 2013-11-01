@@ -113,7 +113,8 @@ class ApartmentController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            print_r($request->request->get('form')['pin']);
+            $formy = $request->request->get('form');
+            echo $formy['pin'];
             /*if($request->request->get('form')->get('pin') == $apartmentPin){
                 //echo 'YOU GOT IT';
                 $user = $this->getUser();
