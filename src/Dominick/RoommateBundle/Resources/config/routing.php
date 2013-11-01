@@ -55,6 +55,9 @@ $collection->add('expense_browse', new Route('/expense/browse/', array(
 $collection->add('expense_edit', new Route('/expense/edit/{id}', array(
     '_controller' => 'DominickRoommateBundle:Expense:editExpense',
 )));
+$collection->add('expense_delete', new Route('/expense/delete/{id}/{token}', array(
+    '_controller' => 'DominickRoommateBundle:Expense:deleteExpense',
+)));
 
 # PAYMENTS
 $collection->add('payment_new', new Route('/payment/new/', array(

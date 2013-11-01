@@ -35,7 +35,7 @@
         <div class="col-md-8">
             <h3>Permanently Delete</h3>
             <p>Alternatively, you can delete this expense by clicking the button below.</p>
-            <p><a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete this expense</a></p>
+            <p><a class="btn btn-danger btn-xs" href="{{ path('expense_delete', {'id':expense.id,'token':expense.token}) }}"><span class="glyphicon glyphicon-remove"></span> Delete this expense</a></p>
         </div>
     </div>
 {% endblock %}

@@ -147,7 +147,7 @@ class ExpenseController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $expense = $this->getDoctrine()->getRepository('DominickRoommateBundle:Expense')->find($id);
+        $expense = $this->getDoctrine()->getRepository('DominickRoommateBundle:Expense')->findOneBy(array('id'=>$id));
         $user = $this->getUser();
 
         $form = $this->createFormBuilder($expense)
@@ -184,14 +184,26 @@ class ExpenseController extends Controller
         if($user->getApartment()->getId() == $expense->getApartmentId()){
             return $this->render('DominickRoommateBundle:Expense:editexpense.html.twig', array(
                 'form' => $form->createView(),
+                'expense' => $expense,
             ));
         } else {
             return $this->redirect($this->generateUrl('expense_browse'));
         }
+    }
+    public function deleteExpenseAction(Request $request, $id, $token)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $expense = $this->getDoctrine()->getRepository('DominickRoommateBundle:Expense')->findOneBy(array('token'=>$token, 'id'=>$id));
+        $user = $this->getUser();
 
-
-       // $em->persist($user);
-        //$em->flush();
-
+        // Checking to see if you are actually deleting an expense from your own apartment. If not, you get the boot!
+        if($user->getApartment()->getId() == $expense->getApartmentId()){
+            $em->remove($expense);
+            $em->flush();
+            //echo $expense->getDescription();
+            return $this->redirect($this->generateUrl('expense_browse'));
+        } else {
+            return $this->redirect($this->generateUrl('expense_browse'));
+        }
     }
 }
