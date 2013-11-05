@@ -10,7 +10,7 @@
             {% if error %}
                 <div>{{ error.message }}</div>
             {% endif %}
-
+            <h3>Please login</h3>
             <form action="{{ path('account_login_check') }}" method="post">
                 <label for="username">Email:</label>
                 <input class="form-control" id="username" type="text" name="_username" value="{{ last_username }}"/>
