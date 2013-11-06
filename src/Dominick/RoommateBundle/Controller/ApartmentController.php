@@ -54,21 +54,6 @@ class ApartmentController extends Controller
             $em->flush();
             // Attempt to get the ID
             $aptId = $apt->getId();
-            /* NOW USING NEW FUNCTION setApartmentIdAction FOR THIS
-                // Load up the user ID so I can inject the apartment ID into the user's row
-                $currentUser = $this->get('security.context')->getToken()->getUser();
-                $currentUserId = $currentUser->getId();
-                // Use the entity manager to get my User entity and find the user of the ID I have
-                $user = $em->getRepository('DominickRoommateBundle:User')->find($currentUserId);
-                if (!$user) {
-                // I'll have to figure out how to properly throw an error later. But if no user can be found with that ID, then this should be an error.
-                }
-                //$user = new User();
-                $user->setApartmentId($aptId);
-                $em->persist($user);
-                $em->flush();
-            */
-            //$this->setApartmentIdAction($aptId);
 
             // Send to the apartment overview page, now that the apartment has been created an tied to them.
             return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
@@ -100,10 +85,8 @@ class ApartmentController extends Controller
         $em = $this->getDoctrine()->getManager();
         $apartment = $this->getDoctrine()->getRepository('DominickRoommateBundle:Apartment')->findOneBy(array('id'=>$id));
         $apartmentPin = $apartment->getPin();
-        // This is how you auto fill form data
-        //
+        // Null out the Pin in the form
         $apartment->setPin('');
-
         $form = $this->createFormBuilder($apartment)
             ->add('pin', 'text')
 
@@ -115,7 +98,6 @@ class ApartmentController extends Controller
         if ($form->isValid()) {
             $formy = $request->request->get('form');
             if($formy['pin'] == $apartmentPin){
-                //echo 'YOU GOT IT';
                 $user = $this->getUser();
                 $user->setApartment($apartment);
                 $em->persist($user);
@@ -128,13 +110,6 @@ class ApartmentController extends Controller
                     'fail' => true,
                 ));
             }
-            //if($form->get)
-            //$user = $this->getUser();
-            //$user->setApartment($apartment);
-
-            //$em->persist($user);
-            //$em->flush();
-            //return $this->redirect($this->generateUrl('dominick_roommate_apartmenthome'));
         }
 
         return $this->render('DominickRoommateBundle:Apartment:verifyapartment.html.twig', array(
